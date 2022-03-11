@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "allowJs": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "noErrorTruncation": false,
+    "isolatedModules": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "pijma": [
+        "src"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "web"
+  ],
+  "exclude": [
+    "lib",
+    "node_modules"
+  ]
+}

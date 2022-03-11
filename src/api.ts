@@ -1,0 +1,76 @@
+import { Animated as RNAnimated } from 'react-native'
+
+import { ImageProps, TextProps, ViewProps } from './props'
+import { styled } from './styled'
+import { imageStyles, textStyles, viewStyles } from './styles'
+
+export {
+  AccessibilityInfo,
+  // ActionSheetIOS,
+  Alert,
+  AppRegistry,
+  AppState,
+  Appearance,
+  BackHandler,
+  Clipboard,
+  DeviceEventEmitter,
+  // DevSettings,
+  Dimensions,
+  // DynamicColorIOS,
+  Easing,
+  I18nManager,
+  InteractionManager,
+  Keyboard,
+  LayoutAnimation,
+  Linking,
+  LogBox,
+  NativeEventEmitter,
+  NativeModules,
+  PanResponder,
+  PermissionsAndroid,
+  PixelRatio,
+  Platform,
+  // PlatformColor,
+  Settings,
+  Share,
+  StatusBar,
+  StyleSheet,
+  Systrace,
+  UIManager,
+  Vibration,
+  findNodeHandle,
+  processColor,
+} from 'react-native'
+
+export const Animated = {
+  Value: RNAnimated.Value,
+  ValueXY: RNAnimated.ValueXY,
+  decay: RNAnimated.decay,
+  timing: RNAnimated.timing,
+  add: RNAnimated.add,
+  subtract: RNAnimated.subtract,
+  divide: RNAnimated.divide,
+  multiply: RNAnimated.multiply,
+  modulo: RNAnimated.modulo,
+  diffClamp: RNAnimated.diffClamp,
+  delay: RNAnimated.delay,
+  sequence: RNAnimated.sequence,
+  stagger: RNAnimated.stagger,
+  loop: RNAnimated.loop,
+  spring: RNAnimated.spring,
+  parallel: RNAnimated.parallel,
+  event: RNAnimated.event,
+  createAnimatedComponent: RNAnimated.createAnimatedComponent,
+  View: styled<RNAnimated.AnimatedProps<ViewProps>>(
+    RNAnimated.View,
+    viewStyles,
+  ),
+  Text: styled<RNAnimated.AnimatedProps<TextProps>>(
+    RNAnimated.Text,
+    textStyles,
+  ),
+  Image: styled<RNAnimated.AnimatedProps<ImageProps>>(
+    RNAnimated.Image,
+    imageStyles,
+  ),
+}
