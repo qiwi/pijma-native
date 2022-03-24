@@ -9751,6 +9751,24 @@ __metadata:
     react-styleguidist: ^11.2.0
     typescript: ^4.6.2
     webpack: ^5.70.0
+  peerDependencies:
+    "@react-navigation/bottom-tabs": "*"
+    "@react-navigation/drawer": "*"
+    "@react-navigation/native": "*"
+    "@react-navigation/native-stack": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    "@types/react-native": "*"
+    markdown-to-jsx: "*"
+    react: "*"
+    react-dom: "*"
+    react-native: "*"
+    react-native-gesture-handler: "*"
+    react-native-reanimated: "*"
+    react-native-safe-area-context: "*"
+    react-native-screens: "*"
+    react-native-svg: "*"
+    react-native-web: "*"
   languageName: unknown
   linkType: soft
 

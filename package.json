@@ -25,6 +25,25 @@
     "test": "exit 0",
     "release": "npx -p @qiwi/semrel-toolkit semrel"
   },
+  "peerDependencies": {
+    "@react-navigation/bottom-tabs": "*",
+    "@react-navigation/drawer": "*",
+    "@react-navigation/native": "*",
+    "@react-navigation/native-stack": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-native": "*",
+    "markdown-to-jsx": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-reanimated": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
+    "react-native-svg": "*",
+    "react-native-web": "*"
+  },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.2.0",
     "@react-navigation/drawer": "^6.3.1",
