@@ -1,6 +1,6 @@
 {
   "name": "pijma",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "license": "MIT",
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
