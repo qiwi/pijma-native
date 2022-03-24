@@ -1,0 +1,50 @@
+name: CI
+on: [ push, pull_request ]
+jobs:
+  skipci:
+    name: Skip CI
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.ci-skip-step.outputs.ci-skip }}
+      skip-not: ${{ steps.ci-skip-step.outputs.ci-skip-not }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Skip
+        uses: mstachniuk/ci-skip@v1
+  test:
+    name: Test
+    needs: skipci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install
+        run: yarn
+      - name: Test
+        run: yarn test
+  release:
+    name: Release
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Install
+        run: yarn
+      - name: Build
+        run: yarn build
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_USER: 'qiwibot'
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_AUTHOR_EMAIL: 'opensource@qiwi.com'
+          GIT_COMMITTER_EMAIL: 'opensource@qiwi.com'
+          GIT_AUTHOR_NAME: '@qiwibot'
+          GIT_COMMITTER_NAME: '@qiwibot'
+        run: yarn release

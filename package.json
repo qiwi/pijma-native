@@ -6,6 +6,9 @@
   "main": "lib/index.js",
   "source": "src/index.ts",
   "react-native": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "src",
     "lib",
@@ -18,7 +21,9 @@
     "build:entry": "node esbuild.script",
     "build:types": "dts-bundle-generator --project tsconfig.build.json --no-check --no-banner --silent --out-file lib/index.d.ts src/index.ts",
     "build:guide": "styleguidist build --mode production",
-    "start": "styleguidist server --mode development"
+    "start": "styleguidist server --mode development",
+    "test": "exit 0",
+    "release": "npx -p @qiwi/semrel-toolkit semrel"
   },
   "dependencies": {
     "@types/react": "^17.0.42",
