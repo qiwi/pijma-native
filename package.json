@@ -25,6 +25,16 @@
     "test": "exit 0",
     "release": "npx -p @qiwi/semrel-toolkit semrel"
   },
+  "peerDependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-native": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-svg": "*",
+    "react-native-web": "*"
+  },
   "dependencies": {
     "@types/react": "^17.0.42",
     "@types/react-dom": "^17.0.14",
