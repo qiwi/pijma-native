@@ -1,3 +1,10 @@
+## [2.1.4](https://github.com/qiwi/pijma-native/compare/v2.1.3...v2.1.4) (2022-03-25)
+
+
+### Bug Fixes
+
+* some deps are peer deps ([c8c210f](https://github.com/qiwi/pijma-native/commit/c8c210f94eaf0f932d72a695cc017d32386a252f))
+
 ## [2.1.3](https://github.com/qiwi/pijma-native/compare/v2.1.2...v2.1.3) (2022-03-24)
 
 
