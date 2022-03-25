@@ -1,3 +1,10 @@
+## [2.1.6](https://github.com/qiwi/pijma-native/compare/v2.1.5...v2.1.6) (2022-03-25)
+
+
+### Bug Fixes
+
+* all deps are dev deps ([36d56d8](https://github.com/qiwi/pijma-native/commit/36d56d893f2a7cff9140a7871d9df5867971e27b))
+
 ## [2.1.5](https://github.com/qiwi/pijma-native/compare/v2.1.4...v2.1.5) (2022-03-25)
 
 
