@@ -9752,14 +9752,11 @@ __metadata:
     typescript: ^4.6.2
     webpack: ^5.70.0
   peerDependencies:
-    "@types/react": "*"
-    "@types/react-dom": "*"
-    "@types/react-native": "*"
-    react: "*"
-    react-dom: "*"
-    react-native: "*"
-    react-native-svg: "*"
-    react-native-web: "*"
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+    react-native: ">=0.50.0"
+    react-native-svg: ">=12.0.0"
+    react-native-web: ">=0.17.0"
   languageName: unknown
   linkType: soft
 
