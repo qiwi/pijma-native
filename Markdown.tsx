@@ -1,43 +1,86 @@
 import Markdown from 'markdown-to-jsx'
-import { Image, Linking, Text, View } from 'pijma'
-import React, { useCallback } from 'react'
+import { Image, Linking, Platform, Text, View } from 'pijma'
+import React, { Children, FC, useCallback } from 'react'
+
+export const Wrapper: FC = ({ children }) => (
+  <>
+    {Children.toArray(children)
+      .filter((child) => !!child)
+      .map((child, key, children) => (
+        <View
+          key={key}
+          marginTop={key === 0 ? undefined : 10}
+          marginBottom={key === children.length - 1 ? undefined : 10}
+        >
+          {child}
+        </View>
+      ))}
+  </>
+)
 
 Markdown.defaultProps = {
   options: {
-    wrapper: View,
+    wrapper: Wrapper,
     forceBlock: true,
     overrides: {
-      p: ({ children }) => (
-        <View marginVertical={10}>
-          <Text flex={1} fontSize={16}>
-            {children}
-          </Text>
-        </View>
-      ),
-      div: ({ children }) => <View marginVertical={10}>{children}</View>,
-      span: {
+      p: {
         component: Text,
+        props: {
+          flex: 1,
+          fontSize: 16,
+        },
+      },
+      div: {
+        component: View,
+      },
+      i: {
+        component: Text,
+        props: {
+          fontStyle: 'italic',
+        },
+      },
+      em: {
+        component: Text,
+        props: {
+          fontStyle: 'italic',
+        },
+      },
+      b: {
+        component: Text,
+        props: {
+          fontWeight: '700',
+        },
+      },
+      strong: {
+        component: Text,
+        props: {
+          fontWeight: '700',
+        },
       },
       code: {
         component: Text,
+        props: {
+          fontFamily: Platform.select({
+            ios: 'Courier New',
+            default: 'monospace',
+          }),
+        },
       },
       pre: {
         component: Text,
         props: {
           flex: 1,
-          fontFamily: 'monospace',
+          fontSize: 12,
         },
       },
       img: ({ src }) => (
-        <View marginVertical={10}>
-          <Image
-            width="90vmin"
-            height="90vmin"
-            source={{
-              uri: src,
-            }}
-          />
-        </View>
+        <Image
+          width="90vmin"
+          height="90vmin"
+          source={{
+            uri: src,
+          }}
+        />
       ),
       a: ({ href, children }) => {
         const onPress = useCallback(async () => {

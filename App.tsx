@@ -20,7 +20,10 @@ export const App = () => (
         {Object.entries(examples).map(([name, Component]) => (
           <Screen key={name} name={name}>
             {() => (
-              <ScrollView padding={10}>
+              <ScrollView
+                contentContainerPaddingHorizontal={10}
+                contentContainerPaddingVertical={20}
+              >
                 <Component />
               </ScrollView>
             )}

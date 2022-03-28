@@ -19,7 +19,12 @@ const config = getConfig()
 const examplesDir = path.resolve(__dirname, 'examples')
 
 function processExample(name, file) {
-  const examples = chunkify(fs.readFileSync(file))
+  const examples = chunkify(
+    fs
+      .readFileSync(file)
+      .toString()
+      .replaceAll(/```\S+ static/g, '```static'),
+  )
 
   const dir = path.resolve(examplesDir, name)
 
@@ -27,19 +32,18 @@ function processExample(name, file) {
 
   examples.forEach((example, i) => {
     if (example.type === 'markdown') {
+      const markdown = example.content
+        .replaceAll("'", "\\'")
+        .replaceAll('\n', '\\n')
       fs.writeFileSync(
         path.resolve(dir, `${name}${i}.jsx`),
         [
           `import React from 'react'`,
           `import { Markdown } from '../../Markdown'`,
           ``,
-          `const content = '${example.content
-            .replaceAll('\n', '\\n')
-            .replaceAll("'", '\\')}'`,
-          ``,
           `export const ${name}${i} = () => {`,
           `  return (`,
-          `    <Markdown>{content}</Markdown>`,
+          `    <Markdown>{'${markdown}'}</Markdown>`,
           `  )`,
           `}`,
         ].join('\n'),

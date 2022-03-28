@@ -1,5 +1,6 @@
 {
   "name": "pijma",
+  "description": "Велосипед над react-native",
   "version": "2.1.6",
   "license": "MIT",
   "types": "lib/index.d.ts",
