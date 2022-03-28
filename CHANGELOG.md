@@ -1,3 +1,10 @@
+## [2.1.7](https://github.com/qiwi/pijma-native/compare/v2.1.6...v2.1.7) (2022-03-28)
+
+
+### Bug Fixes
+
+* native example markdown ([7b96df9](https://github.com/qiwi/pijma-native/commit/7b96df9de1be218030d88cd7d49bb9d077e62e23))
+
 ## [2.1.6](https://github.com/qiwi/pijma-native/compare/v2.1.5...v2.1.6) (2022-03-25)
 
 
