@@ -1,12 +1,7 @@
 import React, { ComponentType, forwardRef } from 'react'
-import {
-  Platform,
-  StyleProp,
-  StyleSheet,
-  useWindowDimensions,
-} from 'react-native'
+import { Platform, StyleProp, StyleSheet } from 'react-native'
 
-import { useBreakpoint } from './hooks'
+import { useBreakpoint, useViewportUnits } from './hooks'
 
 export type ResponsiveValue<Value> = Value | Value[]
 
@@ -96,30 +91,20 @@ export const normalizeValue: <Style>(
   value: ResponsiveValue<any> | ResponsiveStateValue<any, any>,
 ) => any = (prop, value) => {
   const val = breakpointValue(prop, value)
-  if (typeof val === 'string') {
-    const match = val.match(/^([+-]?\d*\.?\d+)(vw|vh|vmin|vmax)?$/)
-    if (!match || Platform.OS === 'web') {
-      return val
-    }
-    const unit = match[2]
-    const numeric = parseFloat(match[1])
-    const { width, height } = useWindowDimensions()
-    const vw = width / 100
-    const vh = height / 100
-    switch (unit) {
-      case 'vw':
-        return numeric * vw
-      case 'vh':
-        return numeric * vh
-      case 'vmin':
-        return numeric * Math.min(vw, vh)
-      case 'vmax':
-        return numeric * Math.max(vw, vh)
-      default:
-        return val
-    }
+  if (Platform.OS === 'web') {
+    return val
   }
-  return val
+  if (typeof val !== 'string') {
+    return val
+  }
+  const match = val.match(/^([+-]?\d*\.?\d+)(vw|vh|vmin|vmax)$/)
+  if (!match) {
+    return val
+  }
+  return (
+    parseFloat(match[1]) *
+    useViewportUnits()[match[2] as keyof ReturnType<typeof useViewportUnits>]
+  )
 }
 
 type StyleProps<Style> = {
