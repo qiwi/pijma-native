@@ -1,3 +1,11 @@
+## [2.1.8](https://github.com/qiwi/pijma-native/compare/v2.1.7...v2.1.8) (2022-03-30)
+
+
+### Bug Fixes
+
+* style ([013cf6f](https://github.com/qiwi/pijma-native/commit/013cf6f8e919be2d2b7f78c99e2f0e94237b9113))
+* viewport units ([c2e8abe](https://github.com/qiwi/pijma-native/commit/c2e8abe80cf8b81821c4a8a33bab1dc183ac1c60))
+
 ## [2.1.7](https://github.com/qiwi/pijma-native/compare/v2.1.6...v2.1.7) (2022-03-28)
 
 
