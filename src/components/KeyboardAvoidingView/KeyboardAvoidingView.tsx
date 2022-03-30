@@ -5,8 +5,8 @@ import {
 } from 'react-native'
 
 import {
-  breakpointValue,
   createStyleSheet,
+  normalizeValue,
   PrefixStyle,
   prefixStyles,
   ResponsivePrefixStyleProps,
@@ -37,7 +37,7 @@ export const KeyboardAvoidingView = forwardRef<any, KeyboardAvoidingViewProps>(
       >
       const attrsProp = prop as keyof RNKeyboardAvoidingViewProps
       if (viewStyles.includes(styleProp)) {
-        styles[styleProp] = breakpointValue(styleProp, value)
+        styles[styleProp] = normalizeValue(styleProp, value)
       } else if (
         contentContainerViewStyles.includes(contentContainerStyleProp)
       ) {
@@ -45,7 +45,7 @@ export const KeyboardAvoidingView = forwardRef<any, KeyboardAvoidingViewProps>(
           ViewStyle,
           'contentContainer'
         >(contentContainerStyleProp, 'contentContainer')
-        contentContainerStyles[contentContainerViewStyleProp] = breakpointValue(
+        contentContainerStyles[contentContainerViewStyleProp] = normalizeValue(
           contentContainerViewStyleProp,
           value,
         )

@@ -1,28 +1,18 @@
 Велосипед над нативным компонентом [Modal](https://reactnative.dev/docs/modal)
 
 ```jsx
-import React, {useState} from 'react';
-import {Modal, View, Text, Button} from 'pijma';
+import React, { useState } from 'react'
+import { Modal, View, Text, Button } from 'pijma'
 
-const [modalVisible, setModalVisible] = useState(false);
+const [modalVisible, setModalVisible] = useState(false)
 
-<View
-  flex={1}
-  justifyContent="center"
-  alignItems="center"
-  padding={20}
->
+;<View flex={1} justifyContent="center" alignItems="center" padding={20}>
   <Modal
     animationType="fade"
     visible={modalVisible}
     onRequestClose={() => setModalVisible(!modalVisible)}
   >
-    <View
-      flex={1}
-      justifyContent="center"
-      alignItems="center"
-      padding={20}
-    >
+    <View flex={1} justifyContent="center" alignItems="center" padding={20}>
       <View
         margin={20}
         backgroundColor="white"
@@ -38,10 +28,7 @@ const [modalVisible, setModalVisible] = useState(false);
         shadowRadius={4}
         elevation={5}
       >
-        <Text
-          marginBottom={15}
-          textAlign="center"
-        >
+        <Text marginBottom={15} textAlign="center">
           Hello World!
         </Text>
         <Button

@@ -5,8 +5,8 @@ import {
 } from 'react-native'
 
 import {
-  breakpointValue,
   createStyleSheet,
+  normalizeValue,
   PrefixStyle,
   prefixStyles,
   ResponsivePrefixStyleProps,
@@ -34,13 +34,13 @@ export const ImageBackground = forwardRef<any, ImageBackgroundProps>(
       const imageStyleProp = prop as PrefixStyle<ImageStyle, 'image'>
       const attrsProp = prop as keyof RNImageBackgroundProps
       if (viewStyles.includes(styleProp)) {
-        styles[styleProp] = breakpointValue(styleProp, value)
+        styles[styleProp] = normalizeValue(styleProp, value)
       } else if (imageImageStyles.includes(imageStyleProp)) {
         const imageImageStyleProp = unPrefixStyle<ImageStyle, 'image'>(
           imageStyleProp,
           'image',
         )
-        imageStyles[imageImageStyleProp] = breakpointValue(
+        imageStyles[imageImageStyleProp] = normalizeValue(
           imageImageStyleProp,
           value,
         )

@@ -1,12 +1,12 @@
 Велосипед над нативным компонентом [FlatList](https://reactnative.dev/docs/flatlist)
 
 ```jsx
-import React, {useState} from 'react';
-import {FlatList, Pressable, Text, View} from 'pijma';
+import React, { useState } from 'react'
+import { FlatList, Pressable, Text, View } from 'pijma'
 
-const [selectedId, setSelectedId] = useState(null);
+const [selectedId, setSelectedId] = useState(null)
 
-<FlatList
+;<FlatList
   height={200}
   data={[
     {
@@ -34,16 +34,18 @@ const [selectedId, setSelectedId] = useState(null);
       title: 'Sixth Item',
     },
   ]}
-  keyExtractor={({id}) => id}
-  renderItem={({item}) => (
+  keyExtractor={({ id }) => id}
+  renderItem={({ item }) => (
     <Pressable
-      backgroundColor={item.id === selectedId ? "#6e3b6e" : "#f9c2ff"}
+      backgroundColor={item.id === selectedId ? '#6e3b6e' : '#f9c2ff'}
       padding={20}
       marginVertical={10}
-      opacity={({pressed, hovered}) => pressed ? 0.6 : hovered ? 0.8 : 1}
-      onPress={() => setSelectedId(item.id === selectedId ? undefined : item.id)}
+      opacity={({ pressed, hovered }) => (pressed ? 0.6 : hovered ? 0.8 : 1)}
+      onPress={() =>
+        setSelectedId(item.id === selectedId ? undefined : item.id)
+      }
     >
-      {({pressed}) => (
+      {({ pressed }) => (
         <Text
           selectable={false}
           fontSize={32}

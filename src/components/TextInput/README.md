@@ -1,12 +1,12 @@
 Велосипед над нативным компонентом [TextInput](https://reactnative.dev/docs/textinput)
 
 ```jsx
-import React, {useState} from 'react';
-import {TextInput} from 'pijma';
+import React, { useState } from 'react'
+import { TextInput } from 'pijma'
 
-const [number, setNumber] = useState('');
+const [number, setNumber] = useState('')
 
-<TextInput
+;<TextInput
   width={300}
   height={40}
   margin={12}

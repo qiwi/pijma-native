@@ -5,8 +5,8 @@ import {
 } from 'react-native'
 
 import {
-  breakpointValue,
   createStyleSheet,
+  normalizeValue,
   PrefixStyle,
   prefixStyles,
   ResponsivePrefixStyleProps,
@@ -37,7 +37,7 @@ export const VirtualizedList = forwardRef<any, VirtualizedListProps<any>>(
       >
       const attrsProp = prop as keyof RNVirtualizedListProps<any>
       if (viewStyles.includes(styleProp)) {
-        styles[styleProp] = breakpointValue(styleProp, value)
+        styles[styleProp] = normalizeValue(styleProp, value)
       } else if (
         contentContainerViewStyles.includes(contentContainerStyleProp)
       ) {
@@ -45,7 +45,7 @@ export const VirtualizedList = forwardRef<any, VirtualizedListProps<any>>(
           ViewStyle,
           'contentContainer'
         >(contentContainerStyleProp, 'contentContainer')
-        contentContainerStyles[contentContainerViewStyleProp] = breakpointValue(
+        contentContainerStyles[contentContainerViewStyleProp] = normalizeValue(
           contentContainerViewStyleProp,
           value,
         )

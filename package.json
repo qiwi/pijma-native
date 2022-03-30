@@ -24,6 +24,7 @@
     "build:guide": "styleguidist build --mode production",
     "start": "styleguidist server --mode development",
     "test": "exit 0",
+    "fix": "eslint --fix src && prettier --loglevel silent --write src",
     "release": "npx -p @qiwi/semrel-toolkit semrel"
   },
   "peerDependencies": {

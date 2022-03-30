@@ -3,14 +3,13 @@
 ## Простая картинка
 
 ```jsx
-import React from 'react';
-import {Image} from 'pijma';
-
-<Image
+import React from 'react'
+import { Image } from 'pijma'
+;<Image
   width={300}
   height={300}
   source={{
-    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp'
+    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp',
   }}
 />
 ```
@@ -18,14 +17,13 @@ import {Image} from 'pijma';
 ## Адаптивная картинка
 
 ```jsx
-import React from 'react';
-import {Image} from 'pijma';
-
-<Image
+import React from 'react'
+import { Image } from 'pijma'
+;<Image
   width={[300, 600, 800]}
   height={[300, 600, 800]}
   source={{
-    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp'
+    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp',
   }}
 />
 ```

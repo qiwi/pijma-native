@@ -3,19 +3,19 @@
 ## Простое фоновое изображение
 
 ```jsx
-import React from 'react';
-import {ImageBackground, Text} from 'pijma';
+import React from 'react'
+import { ImageBackground, Text } from 'pijma'
 
-<ImageBackground
+;<ImageBackground
   width={300}
   height={300}
   alignItems="center"
   justifyContent="center"
   imageShadowColor="#ff0000"
   imageShadowOpacity={0.5}
-  imageShadowOffset={{width: 1, height: 1}}
+  imageShadowOffset={{ width: 1, height: 1 }}
   source={{
-    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp'
+    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp',
   }}
 >
   <Text
@@ -27,26 +27,32 @@ import {ImageBackground, Text} from 'pijma';
     lineHeight={200}
     textAlign="center"
     backgroundColor="#000000c0"
-  >INSIDE</Text>
+  >
+    INSIDE
+  </Text>
 </ImageBackground>
 ```
 
 ## Адаптивное фоновое изображение
 
 ```jsx
-import React from 'react';
-import {ImageBackground, Text} from 'pijma';
+import React from 'react'
+import { ImageBackground, Text } from 'pijma'
 
-<ImageBackground
+;<ImageBackground
   width={[300, 600, 800]}
   height={[300, 600, 800]}
   alignItems="center"
   justifyContent="center"
   imageShadowColor="#ff0000"
   imageShadowOpacity={0.5}
-  imageShadowOffset={[{width: 1, height: 1}, {width: 5, height: 5}, {width: 10, height: 10}]}
+  imageShadowOffset={[
+    { width: 1, height: 1 },
+    { width: 5, height: 5 },
+    { width: 10, height: 10 },
+  ]}
   source={{
-    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp'
+    uri: 'https://chpic.su/_data/stickers/f/FreeFromWorries/FreeFromWorries_041.webp',
   }}
 >
   <Text
@@ -58,6 +64,8 @@ import {ImageBackground, Text} from 'pijma';
     lineHeight={[200, 500, 700]}
     textAlign="center"
     backgroundColor="#000000c0"
-  >INSIDE</Text>
+  >
+    INSIDE
+  </Text>
 </ImageBackground>
 ```

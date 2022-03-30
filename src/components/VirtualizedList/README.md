@@ -1,30 +1,29 @@
 Велосипед над нативным компонентом [VirtualizedList](https://reactnative.dev/docs/virtualizedlist)
 
 ```jsx
-import React from 'react';
-import {VirtualizedList, View, Text} from 'pijma';
+import React from 'react'
+import { VirtualizedList, View, Text } from 'pijma'
 
-const data = [];
+const data = []
 
 const getItem = (data, index) => ({
   id: Math.random().toString(12).substring(0),
-  title: `Item ${index + 1}`
-});
+  title: `Item ${index + 1}`,
+})
 
-const getItemCount = (data) => 50;
+const getItemCount = (data) => 50
 
-<VirtualizedList
+;<VirtualizedList
   height={400}
   data={data}
   initialNumToRender={4}
-  renderItem={({item}) => (
+  renderItem={({ item }) => (
     <View
       backgroundColor="#f9c2ff"
       height={150}
       justifyContent="center"
-      marginVertical={8}
-      marginHorizontal={16}
       padding={20}
+      marginVertical={8}
     >
       <Text fontSize={32}>{item.title}</Text>
     </View>

@@ -73,6 +73,13 @@ function processExample(name, file) {
               type: 'render',
             }
           }
+          if (line.trim().startsWith(';<')) {
+            return {
+              ...lines,
+              renders: [...lines.renders, line.replace(';<', '<')],
+              type: 'render',
+            }
+          }
           if (line.trim().endsWith('/>')) {
             return {
               ...lines,
@@ -127,17 +134,18 @@ function processExample(name, file) {
     path.resolve(dir, `${name}.jsx`),
     [
       `import React from 'react'`,
+      `import { Wrapper } from '../../Wrapper'`,
       ``,
       ...examples.map((example, i) => {
         return `import { ${name}${i} } from './${name}${i}'`
       }),
       ``,
       `export const ${name} = () => (`,
-      `  <>`,
+      `  <Wrapper>`,
       ...examples.map((example, i) => {
         return `    <${name}${i} />`
       }),
-      `  </>`,
+      `  </Wrapper>`,
       `)`,
     ].join('\n'),
   )

@@ -5,8 +5,8 @@ import {
 } from 'react-native'
 
 import {
-  breakpointValue,
   createStyleSheet,
+  normalizeValue,
   PrefixStyle,
   prefixStyles,
   ResponsivePrefixStyleProps,
@@ -70,13 +70,13 @@ export const FlatList = forwardRef<any, FlatListProps<any>>((props, ref) => {
     >
     const attrsProp = prop as keyof RNFlatListProps<any>
     if (viewStyles.includes(styleProp)) {
-      styles[styleProp] = breakpointValue(styleProp, value)
+      styles[styleProp] = normalizeValue(styleProp, value)
     } else if (contentContainerViewStyles.includes(contentContainerStyleProp)) {
       const contentContainerViewStyleProp = unPrefixStyle<
         ViewStyle,
         'contentContainer'
       >(contentContainerStyleProp, 'contentContainer')
-      contentContainerStyles[contentContainerViewStyleProp] = breakpointValue(
+      contentContainerStyles[contentContainerViewStyleProp] = normalizeValue(
         contentContainerViewStyleProp,
         value,
       )
@@ -88,7 +88,7 @@ export const FlatList = forwardRef<any, FlatListProps<any>>((props, ref) => {
         'listFooterComponent'
       >(listFooterComponentStyleProp, 'listFooterComponent')
       listFooterComponentStyles[listFooterComponentViewStyleProp] =
-        breakpointValue(listFooterComponentViewStyleProp, value)
+        normalizeValue(listFooterComponentViewStyleProp, value)
     } else if (
       listHeaderComponentViewStyles.includes(listHeaderComponentStyleProp)
     ) {
@@ -97,13 +97,13 @@ export const FlatList = forwardRef<any, FlatListProps<any>>((props, ref) => {
         'listHeaderComponent'
       >(listHeaderComponentStyleProp, 'listHeaderComponent')
       listHeaderComponentStyles[listHeaderComponentViewStyleProp] =
-        breakpointValue(listHeaderComponentViewStyleProp, value)
+        normalizeValue(listHeaderComponentViewStyleProp, value)
     } else if (columnWrapperViewStyles.includes(columnWrapperStyleProp)) {
       const columnWrapperViewStyleProp = unPrefixStyle<
         ViewStyle,
         'columnWrapper'
       >(columnWrapperStyleProp, 'columnWrapper')
-      columnWrapperStyles[columnWrapperViewStyleProp] = breakpointValue(
+      columnWrapperStyles[columnWrapperViewStyleProp] = normalizeValue(
         columnWrapperViewStyleProp,
         value,
       )

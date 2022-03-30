@@ -5,8 +5,8 @@ import {
 } from 'react-native'
 
 import {
-  breakpointValue,
   createStyleSheet,
+  normalizeValue,
   PrefixStyle,
   prefixStyles,
   ResponsivePrefixStyleProps,
@@ -62,7 +62,7 @@ export const SectionList = forwardRef<any, SectionListProps<any>>(
       >
       const attrsProp = prop as keyof RNSectionListProps<any>
       if (viewStyles.includes(styleProp)) {
-        styles[styleProp] = breakpointValue(styleProp, value)
+        styles[styleProp] = normalizeValue(styleProp, value)
       } else if (
         contentContainerViewStyles.includes(contentContainerStyleProp)
       ) {
@@ -70,7 +70,7 @@ export const SectionList = forwardRef<any, SectionListProps<any>>(
           ViewStyle,
           'contentContainer'
         >(contentContainerStyleProp, 'contentContainer')
-        contentContainerStyles[contentContainerViewStyleProp] = breakpointValue(
+        contentContainerStyles[contentContainerViewStyleProp] = normalizeValue(
           contentContainerViewStyleProp,
           value,
         )
@@ -82,7 +82,7 @@ export const SectionList = forwardRef<any, SectionListProps<any>>(
           'listFooterComponent'
         >(listFooterComponentStyleProp, 'listFooterComponent')
         listFooterComponentStyles[listFooterComponentViewStyleProp] =
-          breakpointValue(listFooterComponentViewStyleProp, value)
+          normalizeValue(listFooterComponentViewStyleProp, value)
       } else if (
         listHeaderComponentViewStyles.includes(listHeaderComponentStyleProp)
       ) {
@@ -91,7 +91,7 @@ export const SectionList = forwardRef<any, SectionListProps<any>>(
           'listHeaderComponent'
         >(listHeaderComponentStyleProp, 'listHeaderComponent')
         listHeaderComponentStyles[listHeaderComponentViewStyleProp] =
-          breakpointValue(listHeaderComponentViewStyleProp, value)
+          normalizeValue(listHeaderComponentViewStyleProp, value)
       } else {
         // @ts-ignore TS2590: Expression produces a union type that is too complex to represent.
         attrs[attrsProp] = value

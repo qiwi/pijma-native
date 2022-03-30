@@ -1,22 +1,8 @@
 import Markdown from 'markdown-to-jsx'
 import { Image, Linking, Platform, Text, View } from 'pijma'
-import React, { Children, FC, useCallback } from 'react'
+import React, { useCallback } from 'react'
 
-export const Wrapper: FC = ({ children }) => (
-  <>
-    {Children.toArray(children)
-      .filter((child) => !!child)
-      .map((child, key, children) => (
-        <View
-          key={key}
-          marginTop={key === 0 ? undefined : 10}
-          marginBottom={key === children.length - 1 ? undefined : 10}
-        >
-          {child}
-        </View>
-      ))}
-  </>
-)
+import { Wrapper } from './Wrapper'
 
 Markdown.defaultProps = {
   options: {
