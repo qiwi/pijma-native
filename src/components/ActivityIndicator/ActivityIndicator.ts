@@ -3,13 +3,14 @@ import {
   ActivityIndicatorProps as RNActivityIndicatorProps,
 } from 'react-native'
 
-import { ResponsiveStyleProps, styled } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
-export type ActivityIndicatorProps = Omit<RNActivityIndicatorProps, 'style'> &
-  ResponsiveStyleProps<ViewStyle>
+export type ActivityIndicatorProps = StyledProps<
+  RNActivityIndicatorProps,
+  ViewStyle
+>
 
 export const ActivityIndicator = styled<ActivityIndicatorProps>(
   RNActivityIndicator,
-  viewStyles,
+  { style: 'view' },
 )

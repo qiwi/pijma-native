@@ -1,8 +1,6 @@
 import { Animated as RNAnimated } from 'react-native'
 
-import { ImageProps, TextProps, ViewProps } from './props'
-import { styled } from './styled'
-import { imageStyles, textStyles, viewStyles } from './styles'
+import { ImageProps, styled, TextProps, ViewProps } from './styled'
 
 export {
   AccessibilityInfo,
@@ -61,16 +59,13 @@ export const Animated = {
   parallel: RNAnimated.parallel,
   event: RNAnimated.event,
   createAnimatedComponent: RNAnimated.createAnimatedComponent,
-  View: styled<RNAnimated.AnimatedProps<ViewProps>>(
-    RNAnimated.View,
-    viewStyles,
-  ),
-  Text: styled<RNAnimated.AnimatedProps<TextProps>>(
-    RNAnimated.Text,
-    textStyles,
-  ),
-  Image: styled<RNAnimated.AnimatedProps<ImageProps>>(
-    RNAnimated.Image,
-    imageStyles,
-  ),
+  View: styled<RNAnimated.AnimatedProps<ViewProps>>(RNAnimated.View, {
+    style: 'view',
+  }),
+  Text: styled<RNAnimated.AnimatedProps<TextProps>>(RNAnimated.Text, {
+    style: 'text',
+  }),
+  Image: styled<RNAnimated.AnimatedProps<ImageProps>>(RNAnimated.Image, {
+    style: 'image',
+  }),
 }

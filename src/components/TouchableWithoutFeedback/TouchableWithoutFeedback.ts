@@ -3,8 +3,7 @@ import {
   TouchableWithoutFeedbackProps as RNTouchableWithoutFeedbackProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type TouchableWithoutFeedbackProps = StyledProps<
   RNTouchableWithoutFeedbackProps,
@@ -13,5 +12,5 @@ export type TouchableWithoutFeedbackProps = StyledProps<
 
 export const TouchableWithoutFeedback = styled<TouchableWithoutFeedbackProps>(
   RNTouchableWithoutFeedback,
-  viewStyles,
+  { style: 'view' },
 )

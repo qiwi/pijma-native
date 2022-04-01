@@ -3,8 +3,7 @@ import {
   TouchableOpacityProps as RNTouchableOpacityProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type TouchableOpacityProps = StyledProps<
   RNTouchableOpacityProps,
@@ -13,5 +12,5 @@ export type TouchableOpacityProps = StyledProps<
 
 export const TouchableOpacity = styled<TouchableOpacityProps>(
   RNTouchableOpacity,
-  viewStyles,
+  { style: 'view' },
 )

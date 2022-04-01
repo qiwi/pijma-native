@@ -1,7 +1,196 @@
-import React, { ComponentType, forwardRef } from 'react'
-import { Platform, StyleProp, StyleSheet } from 'react-native'
+import React, { ComponentProps, ComponentType, forwardRef } from 'react'
+import {
+  ColorValue,
+  FlexStyle,
+  ImageProps as RNImageProps,
+  ImageStyle as RNImageStyle,
+  Platform,
+  ShadowStyleIOS,
+  StyleProp,
+  StyleSheet,
+  TextProps as RNTextProps,
+  TextStyle as RNTextStyle,
+  TransformsStyle,
+  ViewProps as RNViewProps,
+  ViewStyle as RNViewStyle,
+} from 'react-native'
 
 import { useBreakpoint, useViewportUnits } from './hooks'
+
+type HrefProps = {
+  href?: string
+  hrefAttrs?: {
+    download?: string
+    rel?: string
+    target?: string
+  }
+}
+
+export type ViewProps = StyledProps<RNViewProps, ViewStyle> & HrefProps
+
+export type TextProps = StyledProps<RNTextProps, TextStyle> & HrefProps
+
+export type ImageProps = StyledProps<RNImageProps, ImageStyle>
+
+interface OutlineStyle {
+  outlineStyle?: 'solid' | 'dotted' | 'dashed' | 'none'
+  outlineColor?: ColorValue
+  outlineWidth?: number
+}
+
+const outlineStyles: (keyof OutlineStyle)[] = [
+  'outlineColor',
+  'outlineStyle',
+  'outlineWidth',
+]
+
+export type ViewStyle = Omit<RNViewStyle, 'testID'> & OutlineStyle
+
+export type TextStyle = Omit<RNTextStyle, 'testID'> & OutlineStyle
+
+export type ImageStyle = Omit<RNImageStyle, 'testID'> & OutlineStyle
+
+const shadowStyles: (keyof ShadowStyleIOS)[] = [
+  'shadowColor',
+  'shadowOffset',
+  'shadowOpacity',
+  'shadowRadius',
+]
+
+const transformsStyles: (keyof TransformsStyle)[] = ['transform']
+
+const layoutStyles: (keyof FlexStyle)[] = [
+  'alignContent',
+  'alignItems',
+  'alignSelf',
+  'aspectRatio',
+  'borderBottomWidth',
+  'borderEndWidth',
+  'borderLeftWidth',
+  'borderRightWidth',
+  'borderStartWidth',
+  'borderTopWidth',
+  'borderWidth',
+  'bottom',
+  'direction',
+  'display',
+  'end',
+  'flex',
+  'flexBasis',
+  'flexDirection',
+  'flexGrow',
+  'flexShrink',
+  'flexWrap',
+  'height',
+  'justifyContent',
+  'left',
+  'margin',
+  'marginBottom',
+  'marginEnd',
+  'marginHorizontal',
+  'marginLeft',
+  'marginRight',
+  'marginStart',
+  'marginTop',
+  'marginVertical',
+  'maxHeight',
+  'maxWidth',
+  'minHeight',
+  'minWidth',
+  'overflow',
+  'padding',
+  'paddingBottom',
+  'paddingEnd',
+  'paddingHorizontal',
+  'paddingLeft',
+  'paddingRight',
+  'paddingStart',
+  'paddingTop',
+  'paddingVertical',
+  'position',
+  'right',
+  'start',
+  'top',
+  'width',
+  'zIndex',
+]
+
+export const viewStyles: (keyof ViewStyle)[] = [
+  'backfaceVisibility',
+  'backgroundColor',
+  'borderBottomColor',
+  'borderBottomEndRadius',
+  'borderBottomLeftRadius',
+  'borderBottomRightRadius',
+  'borderBottomStartRadius',
+  'borderBottomWidth',
+  'borderColor',
+  'borderEndColor',
+  'borderLeftColor',
+  'borderLeftWidth',
+  'borderRadius',
+  'borderRightColor',
+  'borderRightWidth',
+  'borderStartColor',
+  'borderStyle',
+  'borderTopColor',
+  'borderTopEndRadius',
+  'borderTopLeftRadius',
+  'borderTopRightRadius',
+  'borderTopStartRadius',
+  'borderTopWidth',
+  'borderWidth',
+  'elevation',
+  'opacity',
+  ...outlineStyles,
+  ...layoutStyles,
+  ...shadowStyles,
+  ...transformsStyles,
+]
+
+export const textStyles: (keyof TextStyle)[] = [
+  'color',
+  'fontFamily',
+  'fontSize',
+  'fontStyle',
+  'fontWeight',
+  'includeFontPadding',
+  'fontVariant',
+  'letterSpacing',
+  'lineHeight',
+  'textAlign',
+  'textAlignVertical',
+  'textDecorationColor',
+  'textDecorationLine',
+  'textDecorationStyle',
+  'textShadowColor',
+  'textShadowOffset',
+  'textShadowRadius',
+  'textTransform',
+  'writingDirection',
+  ...viewStyles,
+]
+
+export const imageStyles: (keyof ImageStyle)[] = [
+  'backfaceVisibility',
+  'backgroundColor',
+  'borderBottomLeftRadius',
+  'borderBottomRightRadius',
+  'borderColor',
+  'borderRadius',
+  'borderTopLeftRadius',
+  'borderTopRightRadius',
+  'borderWidth',
+  'opacity',
+  'overflow',
+  'overlayColor',
+  'resizeMode',
+  'tintColor',
+  ...layoutStyles,
+  ...outlineStyles,
+  ...shadowStyles,
+  ...transformsStyles,
+]
 
 export type ResponsiveValue<Value> = Value | Value[]
 
@@ -119,25 +308,90 @@ export type StyledProps<Props extends StyleProps<Style>, Style> = Omit<
 
 export const createStyleSheet = StyleSheet.create
 
-export const styled = <Props, P extends StyleProps<S> = any, S = any>(
-  Component: ComponentType<P>,
-  styleProps: (keyof S)[],
+type StyleType = 'view' | 'text' | 'image'
+
+const StyleStyles: Record<
+  StyleType,
+  (keyof ViewStyle)[] | (keyof TextStyle)[] | (keyof ImageStyle)[]
+> = {
+  view: viewStyles,
+  text: textStyles,
+  image: imageStyles,
+}
+
+export const styled = <Props, C extends ComponentType<ComponentProps<C>> = any>(
+  Component: C,
+  styles: Record<string, StyleType>,
 ) => {
   const StyledComponent = forwardRef<any, Props>((props, ref) => {
-    const styles = {} as S
-    const attrs = {} as P
+    const allStyles: Record<string, ViewStyle | TextStyle | ImageStyle> = {}
+    const attrs = {} as ComponentProps<C>
+    const prefixes = Object.keys(styles)
+    const prefixedStyles = prefixes.reduce(
+      (prefixedStyles, prefix) => ({
+        ...prefixedStyles,
+        ...{
+          [prefix]:
+            prefix === 'style'
+              ? StyleStyles[styles[prefix]]
+              : prefixStyles(
+                  StyleStyles[styles[prefix]],
+                  prefix.replace(/style$/i, ''),
+                ),
+        },
+      }),
+      {},
+    )
     Object.entries(props).forEach(([prop, value]) => {
-      const styleProp = prop as keyof S
-      const attrsProps = prop as keyof P
-      if (styleProps.includes(styleProp)) {
-        styles[styleProp] = normalizeValue(styleProp, value)
+      const prefix = prefixes.find((prefix) =>
+        // @ts-ignore
+        prefixedStyles[prefix].includes(prop),
+      )
+      if (prefix !== undefined) {
+        const styleProp =
+          prefix === 'style'
+            ? prop
+            : unPrefixStyle(
+                // @ts-ignore
+                prop,
+                prefix.replace(/style$/i, ''),
+              )
+        allStyles[prefix] = {
+          ...(allStyles[prefix] || {}),
+          ...{
+            [styleProp]: normalizeValue(
+              // @ts-ignore
+              styleProp,
+              value,
+            ),
+          },
+        }
       } else {
         // @ts-ignore
-        attrs[attrsProps] = value
+        attrs[prop] = value
       }
     })
-    const { style } = createStyleSheet({ style: styles })
-    return <Component {...attrs} ref={ref} style={[style, attrs.style]} />
+    return (
+      // @ts-ignore
+      <Component
+        {...attrs}
+        ref={ref}
+        {...Object.entries(createStyleSheet(allStyles)).reduce(
+          (res, [key, value]) => ({
+            ...res,
+
+            ...{
+              [key]: [
+                value,
+                // @ts-ignore
+                attrs[key],
+              ],
+            },
+          }),
+          {},
+        )}
+      />
+    )
   })
 
   StyledComponent.displayName = Component.displayName

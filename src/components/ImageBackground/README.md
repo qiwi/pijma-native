@@ -5,7 +5,6 @@
 ```jsx
 import React from 'react'
 import { ImageBackground, Text } from 'pijma'
-
 ;<ImageBackground
   width={300}
   height={300}
@@ -38,7 +37,6 @@ import { ImageBackground, Text } from 'pijma'
 ```jsx
 import React from 'react'
 import { ImageBackground, Text } from 'pijma'
-
 ;<ImageBackground
   width={[300, 600, 800]}
   height={[300, 600, 800]}

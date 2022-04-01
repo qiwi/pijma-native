@@ -3,8 +3,7 @@ import {
   TouchableNativeFeedbackProps as RNTouchableNativeFeedbackProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type TouchableNativeFeedbackProps = StyledProps<
   RNTouchableNativeFeedbackProps,
@@ -13,5 +12,5 @@ export type TouchableNativeFeedbackProps = StyledProps<
 
 export const TouchableNativeFeedback = styled<TouchableNativeFeedbackProps>(
   RNTouchableNativeFeedback,
-  viewStyles,
+  { style: 'view' },
 )

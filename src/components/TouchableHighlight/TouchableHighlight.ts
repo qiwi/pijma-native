@@ -3,8 +3,7 @@ import {
   TouchableHighlightProps as RNTouchableHighlightProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type TouchableHighlightProps = StyledProps<
   RNTouchableHighlightProps,
@@ -13,5 +12,5 @@ export type TouchableHighlightProps = StyledProps<
 
 export const TouchableHighlight = styled<TouchableHighlightProps>(
   RNTouchableHighlight,
-  viewStyles,
+  { style: 'view' },
 )

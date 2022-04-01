@@ -1,6 +1,6 @@
 import {
-  FlatList as RNFlatList,
-  FlatListProps as RNFlatListProps,
+  SectionList as RNSectionList,
+  SectionListProps as RNSectionListProps,
 } from 'react-native'
 
 import {
@@ -10,26 +10,23 @@ import {
   ViewStyle,
 } from '../../styled'
 
-export type FlatListProps<Item> = Omit<
-  RNFlatListProps<Item>,
+export type SectionListProps<Item> = Omit<
+  RNSectionListProps<Item>,
   | 'style'
   | 'contentContainerStyle'
   | 'ListFooterComponentStyle'
   | 'ListHeaderComponentStyle'
-  | 'columnWrapperStyle'
 > &
   ResponsiveStyleProps<ViewStyle> &
   ResponsivePrefixStyleProps<ViewStyle, 'contentContainer'> &
   ResponsivePrefixStyleProps<ViewStyle, 'listFooterComponent'> &
-  ResponsivePrefixStyleProps<ViewStyle, 'listHeaderComponent'> &
-  ResponsivePrefixStyleProps<ViewStyle, 'columnWrapper'>
+  ResponsivePrefixStyleProps<ViewStyle, 'listHeaderComponent'>
 
-export const FlatList = styled<FlatListProps<any>>(RNFlatList, {
+export const SectionList = styled<SectionListProps<any>>(RNSectionList, {
   style: 'view',
   contentContainerStyle: 'view',
   ListFooterComponentStyle: 'view',
   ListHeaderComponentStyle: 'view',
-  columnWrapperStyle: 'view',
 })
 
-FlatList.displayName = 'FlatList'
+SectionList.displayName = 'SectionList'

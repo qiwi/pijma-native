@@ -1,7 +1,5 @@
 import { Image as RNImage } from 'react-native'
 
-import { ImageProps } from '../../props'
-import { styled } from '../../styled'
-import { imageStyles } from '../../styles'
+import { ImageProps, styled } from '../../styled'
 
-export const Image = styled<ImageProps>(RNImage, imageStyles)
+export const Image = styled<ImageProps>(RNImage, { style: 'image' })

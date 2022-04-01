@@ -1,8 +1,7 @@
 import { Modal as RNModal, ModalProps as RNModalProps } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type ModalProps = StyledProps<RNModalProps, ViewStyle>
 
-export const Modal = styled<ModalProps>(RNModal, viewStyles)
+export const Modal = styled<ModalProps>(RNModal, { style: 'view' })

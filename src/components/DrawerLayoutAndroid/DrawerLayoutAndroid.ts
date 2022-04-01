@@ -3,8 +3,7 @@ import {
   DrawerLayoutAndroidProps as RNDrawerLayoutAndroidProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type DrawerLayoutAndroidProps = StyledProps<
   RNDrawerLayoutAndroidProps,
@@ -13,5 +12,5 @@ export type DrawerLayoutAndroidProps = StyledProps<
 
 export const DrawerLayoutAndroid = styled<DrawerLayoutAndroidProps>(
   RNDrawerLayoutAndroid,
-  viewStyles,
+  { style: 'view' },
 )

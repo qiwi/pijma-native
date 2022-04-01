@@ -10,8 +10,9 @@ import {
   normalizeValue,
   ResponsiveStateValue,
   ResponsiveStyleStateProps,
+  ViewStyle,
+  viewStyles,
 } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
 
 type PressableStateCallbackType = RNPressableStateCallbackType & {
   hovered?: boolean

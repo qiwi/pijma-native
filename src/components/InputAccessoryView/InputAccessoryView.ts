@@ -3,8 +3,7 @@ import {
   InputAccessoryViewProps as RNInputAccessoryViewProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { ViewStyle, viewStyles } from '../../styles'
+import { styled, StyledProps, ViewStyle } from '../../styled'
 
 export type InputAccessoryViewProps = StyledProps<
   RNInputAccessoryViewProps,
@@ -13,5 +12,5 @@ export type InputAccessoryViewProps = StyledProps<
 
 export const InputAccessoryView = styled<InputAccessoryViewProps>(
   RNInputAccessoryView,
-  viewStyles,
+  { style: 'view' },
 )

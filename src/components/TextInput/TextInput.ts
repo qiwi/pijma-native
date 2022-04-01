@@ -3,9 +3,8 @@ import {
   TextInputProps as RNTextInputProps,
 } from 'react-native'
 
-import { styled, StyledProps } from '../../styled'
-import { TextStyle, textStyles } from '../../styles'
+import { styled, StyledProps, TextStyle } from '../../styled'
 
 export type TextInputProps = StyledProps<RNTextInputProps, TextStyle>
 
-export const TextInput = styled<TextInputProps>(RNTextInput, textStyles)
+export const TextInput = styled<TextInputProps>(RNTextInput, { style: 'text' })
