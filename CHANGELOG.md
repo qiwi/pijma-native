@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/qiwi/pijma-native/compare/v2.1.8...v2.2.0) (2022-04-01)
+
+
+### Features
+
+* almost universal styled ([c38e761](https://github.com/qiwi/pijma-native/commit/c38e7612ccc066972ee84e8fc53e09d12632bade))
+
 ## [2.1.8](https://github.com/qiwi/pijma-native/compare/v2.1.7...v2.1.8) (2022-03-30)
 
 
