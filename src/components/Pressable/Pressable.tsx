@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, ReactNode } from 'react'
 import {
   Pressable as RNPressable,
   PressableProps as RNPressableProps,
@@ -19,8 +19,13 @@ type PressableStateCallbackType = RNPressableStateCallbackType & {
   focused?: boolean
 }
 
-export type PressableProps = Omit<RNPressableProps, 'style'> &
-  ResponsiveStyleStateProps<ViewStyle, PressableStateCallbackType>
+export type PressableProps = Omit<RNPressableProps, 'style' | 'children'> &
+  ResponsiveStyleStateProps<ViewStyle, PressableStateCallbackType> & {
+    children?:
+      | ReactNode
+      | ((state: PressableStateCallbackType) => ReactNode)
+      | undefined
+  }
 
 export const Pressable = forwardRef<any, PressableProps>((props, ref) => {
   const styles = {} as ResponsiveStyleStateProps<
