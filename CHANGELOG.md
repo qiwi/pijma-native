@@ -1,3 +1,10 @@
+## [2.4.4](https://github.com/qiwi/pijma-native/compare/v2.4.3...v2.4.4) (2022-04-05)
+
+
+### Bug Fixes
+
+* pressable children ([e7f4502](https://github.com/qiwi/pijma-native/commit/e7f45027031a1b901985e1bd2effa1c6b81927ea))
+
 ## [2.4.3](https://github.com/qiwi/pijma-native/compare/v2.4.2...v2.4.3) (2022-04-05)
 
 
