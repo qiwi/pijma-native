@@ -3,10 +3,20 @@
   "description": "Велосипед над react-native",
   "version": "2.3.0",
   "license": "MIT",
-  "types": "lib/index.d.ts",
-  "main": "lib/index.js",
-  "source": "src/index.ts",
-  "react-native": "src/index.ts",
+  "type": "module",
+  "sideEffects": false,
+  "source": "./src/index.ts",
+  "react-native": "./src/index.ts",
+  "main": "./lib/es5/index.js",
+  "module": "./lib/es6/index.js",
+  "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/dts/index.d.ts",
+      "import": "./lib/es6/index.js",
+      "require": "./lib/es5/index.js"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -18,21 +28,23 @@
   "scripts": {
     "clean": "rm -rf lib web/build",
     "build": "concurrently 'npm:build:*'",
-    "build:check": "tsc --project tsconfig.build.json",
-    "build:entry": "node esbuild.script",
-    "build:types": "dts-bundle-generator --project tsconfig.build.json --no-check --no-banner --silent --out-file lib/index.d.ts src/index.ts",
-    "build:guide": "styleguidist build --mode production",
-    "start": "styleguidist server --mode development",
+    "build:es5": "tsc --project tsconfig.es5.json",
+    "build:es6": "tsc --project tsconfig.es6.json",
+    "build:dts": "tsc --project tsconfig.dts.json",
+    "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
+    "start": "styleguidist --config styleguide.config.cjs server --mode development",
     "test": "exit 0",
-    "fix": "eslint --fix src && prettier --loglevel silent --write src",
-    "release": "npx -p @qiwi/semrel-toolkit semrel"
+    "style": "eslint --fix src && prettier --loglevel silent --write src",
+    "examples": "node examples.script.cjs",
+    "release": "semrel"
   },
   "peerDependencies": {
     "react": ">=17.0.0",
     "react-dom": ">=17.0.0",
     "react-native": ">=0.50.0",
     "react-native-svg": ">=12.0.0",
-    "react-native-web": ">=0.17.0"
+    "react-native-web": ">=0.17.0",
+    "tslib": ">=2.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.17.8",
@@ -40,6 +52,7 @@
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
     "@babel/runtime": "7.17.8",
+    "@qiwi/semrel-toolkit": "3.2.8",
     "@react-navigation/bottom-tabs": "6.3.1",
     "@react-navigation/drawer": "6.4.1",
     "@react-navigation/native": "6.0.10",
@@ -51,11 +64,8 @@
     "babel-plugin-extension-resolver": "1.0.12",
     "babel-plugin-module-resolver": "4.1.0",
     "babel-plugin-react-native-web": "0.17.7",
+    "babel-plugin-tsconfig-paths-module-resolver": "1.0.3",
     "concurrently": "7.1.0",
-    "dts-bundle-generator": "6.6.0",
-    "esbuild": "0.14.31",
-    "esbuild-loader": "2.18.0",
-    "esbuild-node-externals": "1.4.1",
     "eslint": "8.12.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-qiwi": "1.16.1",
@@ -74,6 +84,7 @@
     "react-native-svg": "12.3.0",
     "react-native-web": "0.17.7",
     "react-styleguidist": "11.2.0",
+    "tslib": "2.3.1",
     "typescript": "4.6.3",
     "webpack": "5.71.0"
   },

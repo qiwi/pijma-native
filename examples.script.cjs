@@ -14,7 +14,7 @@ const getProps =
 const chunkify =
   require('react-styleguidist/lib/loaders/utils/chunkify').default
 
-const config = getConfig()
+const config = getConfig(path.resolve(__dirname, 'styleguide.config.cjs'))
 
 const examplesDir = path.resolve(__dirname, 'examples')
 
@@ -36,7 +36,7 @@ function processExample(name, file) {
         .replaceAll("'", "\\'")
         .replaceAll('\n', '\\n')
       fs.writeFileSync(
-        path.resolve(dir, `${name}${i}.jsx`),
+        path.resolve(dir, `${name}${i}.tsx`),
         [
           `import React from 'react'`,
           `import { Markdown } from '../../Markdown'`,
@@ -116,7 +116,7 @@ function processExample(name, file) {
       )
 
       fs.writeFileSync(
-        path.resolve(dir, `${name}${i}.jsx`),
+        path.resolve(dir, `${name}${i}.tsx`),
         [
           ...lines.imports,
           `export const ${name}${i} = () => {`,
@@ -131,7 +131,7 @@ function processExample(name, file) {
   })
 
   fs.writeFileSync(
-    path.resolve(dir, `${name}.jsx`),
+    path.resolve(dir, `${name}.tsx`),
     [
       `import React from 'react'`,
       `import { Wrapper } from '../../Wrapper'`,
@@ -151,7 +151,7 @@ function processExample(name, file) {
   )
 
   fs.writeFileSync(
-    path.resolve(dir, `index.js`),
+    path.resolve(dir, `index.ts`),
     [`export * from './${name}'`, ``].join('\n'),
   )
 
@@ -185,7 +185,7 @@ function processSection(section) {
   const components = processComponents(section.components || [])
 
   fs.writeFileSync(
-    path.resolve(examplesDir, 'index.js'),
+    path.resolve(examplesDir, 'index.ts'),
     [
       `import { ${section.name}Example } from './${section.name}Example'`,
       ...components.map(
