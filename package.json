@@ -9,7 +9,7 @@
   "react-native": "./src/index.ts",
   "main": "./lib/es5/index.js",
   "module": "./lib/es6/index.js",
-  "types": "./lib/types/index.d.ts",
+  "types": "./lib/dts/index.d.ts",
   "exports": {
     ".": {
       "types": "./lib/dts/index.d.ts",
