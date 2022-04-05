@@ -8,6 +8,7 @@ const pkg = require(path.resolve(__dirname, 'package.json'))
 const styleguide = path.resolve(__dirname, 'web')
 
 module.exports = {
+  webpackConfig: require(path.resolve(__dirname, 'webpack.config.cjs')),
   propsParser: withCustomConfig(path.resolve(__dirname, 'tsconfig.json'), {})
     .parse,
   ignore: ['**/*/index.{ts,tsx}'],
