@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/qiwi/pijma-native/compare/v2.2.0...v2.3.0) (2022-04-05)
+
+
+### Features
+
+* up react-native ([d2f5c49](https://github.com/qiwi/pijma-native/commit/d2f5c495af093ea0993171e11d05bb69031b4c82))
+
 # [2.2.0](https://github.com/qiwi/pijma-native/compare/v2.1.8...v2.2.0) (2022-04-01)
 
 
