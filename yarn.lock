@@ -2845,6 +2845,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/fs-extra@npm:^9.0.13":
+  version: 9.0.13
+  resolution: "@types/fs-extra@npm:9.0.13"
+  dependencies:
+    "@types/node": "*"
+  checksum: add79e212acd5ac76b97b9045834e03a7996aef60a814185e0459088fd290519a3c1620865d588fa36c4498bf614210d2a703af5cf80aa1dbc125db78f6edac3
+  languageName: node
+  linkType: hard
+
 "@types/gh-pages@npm:^3.2.0":
   version: 3.2.1
   resolution: "@types/gh-pages@npm:3.2.1"
@@ -9299,7 +9308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.2":
+"json5@npm:^2.1.2, json5@npm:^2.2.1":
   version: 2.2.1
   resolution: "json5@npm:2.2.1"
   bin:
@@ -12141,6 +12150,7 @@ __metadata:
     react-native-svg: 12.3.0
     react-native-web: 0.17.7
     react-styleguidist: 11.2.0
+    tsc-esm-fix: 2.9.0
     tslib: 2.3.1
     typescript: 4.6.3
     webpack: 5.71.0
@@ -15210,6 +15220,22 @@ __metadata:
   version: 1.0.5
   resolution: "trough@npm:1.0.5"
   checksum: d6c8564903ed00e5258bab92134b020724dbbe83148dc72e4bf6306c03ed8843efa1bcc773fa62410dd89161ecb067432dd5916501793508a9506cacbc408e25
+  languageName: node
+  linkType: hard
+
+"tsc-esm-fix@npm:2.9.0":
+  version: 2.9.0
+  resolution: "tsc-esm-fix@npm:2.9.0"
+  dependencies:
+    "@types/fs-extra": ^9.0.13
+    fs-extra: ^10.0.1
+    globby: ^13.1.1
+    json5: ^2.2.1
+    meow: ^10.1.2
+    tslib: ^2.3.1
+  bin:
+    tsc-esm-fix: target/es6/cli.mjs
+  checksum: b3a714bff25ef358c454fb87c162d548382f1d5fc413381bb93281fa559463573f36995bb09810f15199252de8dab31714794895362ab8b1c8df7b761d8a2d62
   languageName: node
   linkType: hard
 

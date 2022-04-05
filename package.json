@@ -27,7 +27,7 @@
     "clean": "rm -rf lib web/build",
     "build": "concurrently 'npm:build:*'",
     "build:cjs": "tsc --project tsconfig.cjs.json",
-    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:esm": "tsc --project tsconfig.esm.json && tsc-esm-fix --tsconfig tsconfig.esm.json",
     "build:dts": "tsc --project tsconfig.dts.json",
     "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
@@ -83,6 +83,7 @@
     "react-native-svg": "12.3.0",
     "react-native-web": "0.17.7",
     "react-styleguidist": "11.2.0",
+    "tsc-esm-fix": "2.9.0",
     "tslib": "2.3.1",
     "typescript": "4.6.3",
     "webpack": "5.71.0"
