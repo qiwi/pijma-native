@@ -1,3 +1,10 @@
+## [2.4.2](https://github.com/qiwi/pijma-native/compare/v2.4.1...v2.4.2) (2022-04-05)
+
+
+### Bug Fixes
+
+* src is jsx ([234ec2c](https://github.com/qiwi/pijma-native/commit/234ec2cb208923c00eaf0af0dee6ba12cc9a2209))
+
 ## [2.4.1](https://github.com/qiwi/pijma-native/compare/v2.4.0...v2.4.1) (2022-04-05)
 
 
