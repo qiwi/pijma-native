@@ -4,8 +4,9 @@
     "noEmit": false,
     "declaration": false,
     "sourceMap": true,
-    "target": "es5",
-    "module": "commonjs",
-    "outDir": "lib/es5"
+    "jsx": "react-native",
+    "target": "es6",
+    "module": "esnext",
+    "outDir": "lib/jsx"
   }
 }

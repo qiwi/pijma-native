@@ -5,32 +5,31 @@
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
-  "source": "./src/index.ts",
-  "react-native": "./src/index.ts",
-  "main": "./lib/es5/index.js",
-  "module": "./lib/es6/index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "types": "./lib/dts/index.d.ts",
+  "react-native": "./lib/jsx/index.js",
   "exports": {
     ".": {
       "types": "./lib/dts/index.d.ts",
-      "import": "./lib/es6/index.js",
-      "require": "./lib/es5/index.js"
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
     }
   },
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "src",
     "lib",
     "README.md"
   ],
   "scripts": {
     "clean": "rm -rf lib web/build",
     "build": "concurrently 'npm:build:*'",
-    "build:es5": "tsc --project tsconfig.es5.json",
-    "build:es6": "tsc --project tsconfig.es6.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
     "build:dts": "tsc --project tsconfig.dts.json",
+    "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
     "start": "styleguidist --config styleguide.config.cjs server --mode development",
     "test": "exit 0",

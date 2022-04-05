@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": false,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "lib/cjs"
+  }
+}

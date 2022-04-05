@@ -4,8 +4,9 @@
     "noEmit": false,
     "declaration": false,
     "sourceMap": true,
+    "jsx": "react-jsx",
     "target": "es6",
     "module": "esnext",
-    "outDir": "lib/es6"
+    "outDir": "lib/esm"
   }
 }
