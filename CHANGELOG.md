@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/qiwi/pijma-native/compare/v2.3.0...v2.4.0) (2022-04-05)
+
+
+### Features
+
+* esm ([#1](https://github.com/qiwi/pijma-native/issues/1)) ([b2706a9](https://github.com/qiwi/pijma-native/commit/b2706a97941b7cb9e66580c018ebaa5b3d52bdcf))
+
 # [2.3.0](https://github.com/qiwi/pijma-native/compare/v2.2.0...v2.3.0) (2022-04-05)
 
 
