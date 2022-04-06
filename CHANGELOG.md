@@ -1,3 +1,11 @@
+## [2.4.6](https://github.com/qiwi/pijma-native/compare/v2.4.5...v2.4.6) (2022-04-06)
+
+
+### Bug Fixes
+
+* examples ([01d6b6a](https://github.com/qiwi/pijma-native/commit/01d6b6a4a402385abc9e5cb6f927cdbd64032cdd))
+* image-background children ([488687f](https://github.com/qiwi/pijma-native/commit/488687fda916a51c66d06eb7f230f76417208ef9))
+
 ## [2.4.5](https://github.com/qiwi/pijma-native/compare/v2.4.4...v2.4.5) (2022-04-06)
 
 
