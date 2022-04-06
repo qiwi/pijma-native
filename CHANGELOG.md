@@ -1,3 +1,10 @@
+## [2.4.5](https://github.com/qiwi/pijma-native/compare/v2.4.4...v2.4.5) (2022-04-06)
+
+
+### Bug Fixes
+
+* add native examples ([34f09d3](https://github.com/qiwi/pijma-native/commit/34f09d3c3bfafc10893dc6de79ee43b1c48fe91a))
+
 ## [2.4.4](https://github.com/qiwi/pijma-native/compare/v2.4.3...v2.4.4) (2022-04-05)
 
 
