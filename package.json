@@ -33,7 +33,7 @@
     "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
     "start": "styleguidist --config styleguide.config.cjs server --mode development",
     "test": "exit 0",
-    "style": "eslint --fix src && prettier --loglevel silent --write src",
+    "style": "eslint --fix src examples && prettier --loglevel silent --write src examples",
     "examples": "node examples.script.cjs",
     "release": "semrel"
   },

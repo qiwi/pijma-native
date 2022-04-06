@@ -1,7 +1,7 @@
 Велосипед над нативным компонентом [Switch](https://reactnative.dev/docs/switch)
 
 ```jsx
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Switch, View } from 'pijma'
 
 const [value, setValue] = useState(false)

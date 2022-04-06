@@ -3,19 +3,9 @@
 ```jsx
 import React from 'react'
 import { VirtualizedList, View, Text } from 'pijma'
-
-const data = []
-
-const getItem = (data, index) => ({
-  id: Math.random().toString(12).substring(0),
-  title: `Item ${index + 1}`,
-})
-
-const getItemCount = (data) => 50
-
 ;<VirtualizedList
   height={400}
-  data={data}
+  data={[]}
   initialNumToRender={4}
   renderItem={({ item }) => (
     <View
@@ -29,7 +19,10 @@ const getItemCount = (data) => 50
     </View>
   )}
   keyExtractor={(item) => item.id}
-  getItemCount={getItemCount}
-  getItem={getItem}
+  getItemCount={() => 50}
+  getItem={(data, index) => ({
+    id: Math.random().toString(12).substring(0),
+    title: `Item ${index + 1}`,
+  })}
 />
 ```

@@ -2,9 +2,9 @@
 
 ```jsx
 import React, { useState } from 'react'
-import { FlatList, Pressable, Text, View } from 'pijma'
+import { FlatList, Pressable, Text } from 'pijma'
 
-const [selectedId, setSelectedId] = useState(null)
+const [selectedId, setSelectedId] = useState(undefined)
 
 ;<FlatList
   height={200}
@@ -45,15 +45,13 @@ const [selectedId, setSelectedId] = useState(null)
         setSelectedId(item.id === selectedId ? undefined : item.id)
       }
     >
-      {({ pressed }) => (
-        <Text
-          selectable={false}
-          fontSize={32}
-          color={item.id === selectedId ? '#fff' : '#000'}
-        >
-          {item.title}
-        </Text>
-      )}
+      <Text
+        selectable={false}
+        fontSize={32}
+        color={item.id === selectedId ? '#fff' : '#000'}
+      >
+        {item.title}
+      </Text>
     </Pressable>
   )}
 />
