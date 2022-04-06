@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import {
   ImageBackground as RNImageBackground,
   ImageBackgroundProps as RNImageBackgroundProps,
@@ -16,7 +17,9 @@ export type ImageBackgroundProps = Omit<
   'style' | 'imageStyle'
 > &
   ResponsiveStyleProps<ViewStyle> &
-  ResponsivePrefixStyleProps<ImageStyle, 'image'>
+  ResponsivePrefixStyleProps<ImageStyle, 'image'> & {
+    children?: ReactNode
+  }
 
 export const ImageBackground = styled<ImageBackgroundProps>(RNImageBackground, {
   style: 'view',
