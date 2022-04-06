@@ -3,19 +3,33 @@ import React from 'react'
 export const TextExample1 = () => {
   return (
     <View flex={1} width="100%">
-      {['100', '200', '300', '400', '500', '600', '700', '800', '900'].map(
-        (fontWeight) => (
-          <Text
-            key={fontWeight}
-            display="flex"
-            color="gray"
-            fontWeight={fontWeight}
-            fontSize={40}
-          >
-            Все говно! И говно - говно!
-          </Text>
-        ),
-      )}
+      <Text display="flex" color="gray" fontWeight="100" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="200" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="300" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="400" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="500" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="600" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="700" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="800" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
+      <Text display="flex" color="gray" fontWeight="900" fontSize={40}>
+        Все говно! И говно - говно!
+      </Text>
     </View>
   )
 }

@@ -5,6 +5,7 @@
 ```jsx
 import React from 'react'
 import { View } from 'pijma'
+
 ;<View backgroundColor="gray" width={200} height={200} />
 ```
 
@@ -13,6 +14,7 @@ import { View } from 'pijma'
 ```jsx
 import React from 'react'
 import { View } from 'pijma'
+
 ;<View
   backgroundColor={['red', 'green', 'blue']}
   width={[100, 200, 300]}
@@ -23,25 +25,23 @@ import { View } from 'pijma'
 ## Ссылка
 
 ```jsx
-import React, { useState } from 'react'
-import { View } from 'pijma'
+import React from 'react'
+import { Pressable, View } from 'pijma'
 
-const [hovered, setHovered] = useState(false)
-
-;<View
-  backgroundColor={hovered ? 'orange' : 'blue'}
-  outlineColor="orange"
-  width={200}
-  height={200}
-  href="https://google.com"
-  hrefAttrs={{
-    target: '_blank',
-  }}
-  // it works but wrong
-  onMouseEnter={() => setHovered(true)}
-  // it works but wrong
-  onMouseLeave={() => setHovered(false)}
-/>
+;<Pressable>
+  {({ hovered, pressed }) => (
+    <View
+      backgroundColor={hovered || pressed ? 'orange' : 'blue'}
+      outlineColor="orange"
+      width={200}
+      height={200}
+      href="https://google.com"
+      hrefAttrs={{
+        target: '_blank',
+      }}
+    />
+  )}
+</Pressable>
 ```
 
 ## Анимация

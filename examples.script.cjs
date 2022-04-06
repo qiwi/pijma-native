@@ -80,13 +80,6 @@ function processExample(name, file) {
               type: 'render',
             }
           }
-          if (line.trim().endsWith('/>')) {
-            return {
-              ...lines,
-              renders: [...lines.renders, line],
-              type: undefined,
-            }
-          }
           if (lines.type === 'import') {
             return {
               ...lines,
