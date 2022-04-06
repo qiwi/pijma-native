@@ -13,16 +13,12 @@
     "removeComments": true,
     "baseUrl": ".",
     "paths": {
-      "pijma": [
-        "src"
+      "@pijma/*": [
+        "packages/*/src"
+      ],
+      "pijma-*": [
+        "apps/*/src"
       ]
     }
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "lib",
-    "node_modules"
-  ]
+  }
 }

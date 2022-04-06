@@ -36,13 +36,9 @@
 
 ```tsx static
 import React from 'react'
-import { Provider, Theme } from 'pijma'
+import { Provider, Theme } from '@pijma/react-native'
 
-const Box = () => (
-  <View
-    style={view}
-  />
-)
+const Box = () => <View style={view} />
 
 const styles = StyleSheet.create({
   view: {
@@ -73,7 +69,7 @@ if (Dimensions.get('window').width > 400) {
 
 ```tsx static
 import React from 'react'
-import { Provider, Theme } from 'pijma'
+import { Provider, Theme } from '@pijma/react-native'
 
 const Box = () => (
   <View

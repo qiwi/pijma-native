@@ -1,92 +1,35 @@
 {
   "name": "pijma",
-  "description": "Велосипед над react-native",
-  "version": "2.4.12",
+  "private": true,
   "license": "MIT",
-  "type": "module",
-  "sideEffects": false,
-  "main": "./lib/cjs/index.cjs",
-  "module": "./lib/mjs/index.mjs",
-  "types": "./lib/dts/index.d.ts",
-  "react-native": "./lib/jsx/index.js",
-  "exports": {
-    ".": {
-      "types": "./lib/dts/index.d.ts",
-      "import": "./lib/mjs/index.mjs",
-      "require": "./lib/cjs/index.cjs"
-    }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/pijma-native.git"
   },
-  "publishConfig": {
-    "access": "public"
+  "bugs": {
+    "url": "https://github.com/qiwi/pijma-native/issues"
   },
-  "files": [
-    "lib",
-    "README.md"
-  ],
+  "homepage": "https://github.com/qiwi/pijma-native/#readme",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
   "scripts": {
-    "clean": "rm -rf lib web/build",
-    "build": "concurrently 'npm:build:*'",
-    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json --ext .mjs",
-    "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --target lib/cjs --ext .cjs",
-    "build:jsx": "tsc --project tsconfig.jsx.json",
-    "build:dts": "tsc --project tsconfig.dts.json",
-    "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
-    "start": "styleguidist --config styleguide.config.cjs server --mode development",
-    "test": "exit 0",
-    "style": "eslint --fix src examples && prettier --loglevel silent --write src examples",
-    "examples": "node examples.script.cjs",
-    "release": "semrel"
-  },
-  "peerDependencies": {
-    "react": ">=17.0.0",
-    "react-dom": ">=17.0.0",
-    "react-native": ">=0.50.0",
-    "react-native-svg": ">=12.0.0",
-    "react-native-web": ">=0.17.0",
-    "tslib": ">=2.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "7.17.8",
-    "@babel/preset-env": "7.16.11",
-    "@babel/preset-react": "7.16.7",
-    "@babel/preset-typescript": "7.16.7",
-    "@babel/runtime": "7.17.8",
-    "@qiwi/semrel-toolkit": "3.2.8",
-    "@react-navigation/bottom-tabs": "6.3.1",
-    "@react-navigation/drawer": "6.4.1",
-    "@react-navigation/native": "6.0.10",
-    "@react-navigation/native-stack": "6.6.1",
-    "@types/react": "17.0.43",
-    "@types/react-dom": "17.0.14",
-    "@types/react-native": "0.67.3",
-    "babel-loader": "8.2.4",
-    "babel-plugin-extension-resolver": "1.0.12",
-    "babel-plugin-module-resolver": "4.1.0",
-    "babel-plugin-react-native-web": "0.17.7",
-    "babel-plugin-tsconfig-paths-module-resolver": "1.0.3",
-    "concurrently": "7.1.0",
-    "eslint": "8.12.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-config-qiwi": "1.16.1",
-    "markdown-to-jsx": "7.1.7",
-    "metro-react-native-babel-preset": "0.70.0",
-    "prettier": "2.6.2",
-    "prettier-config-qiwi": "1.6.1",
-    "react": "17.0.2",
-    "react-docgen-typescript": "2.2.2",
-    "react-dom": "17.0.2",
-    "react-native": "0.68.0",
-    "react-native-gesture-handler": "2.3.2",
-    "react-native-reanimated": "2.6.0",
-    "react-native-safe-area-context": "4.2.4",
-    "react-native-screens": "3.13.1",
-    "react-native-svg": "12.3.0",
-    "react-native-web": "0.17.7",
-    "react-styleguidist": "11.2.0",
-    "tsc-esm-fix": "2.11.0",
-    "tslib": "2.3.1",
-    "typescript": "4.6.3",
-    "webpack": "5.71.0"
+    "web:start": "yarn workspace pijma-web start",
+    "web:build": "yarn workspace pijma-web build",
+    "web:clean": "yarn workspace pijma-web clean",
+    "android:setup": "yarn workspace pijma-android setup",
+    "android:start": "yarn workspace pijma-android start",
+    "android:clean": "yarn workspace pijma-android clean",
+    "ios:setup": "yarn workspace pijma-ios setup",
+    "ios:start": "yarn workspace pijma-ios start",
+    "ios:clean": "yarn workspace pijma-ios clean",
+    "clean": "yarn workspaces foreach -pt run clean",
+    "build": "yarn workspaces foreach -pt run build",
+    "style": "yarn workspaces foreach -pt run style",
+    "test": "exit 0"
   },
   "packageManager": "yarn@3.2.0"
 }
