@@ -1,7 +1,7 @@
 {
   "name": "pijma",
   "description": "Велосипед над react-native",
-  "version": "2.4.6",
+  "version": "2.4.7",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
