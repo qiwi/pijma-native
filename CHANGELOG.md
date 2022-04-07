@@ -1,3 +1,11 @@
+## [2.4.10](https://github.com/qiwi/pijma-native/compare/v2.4.9...v2.4.10) (2022-04-07)
+
+
+### Bug Fixes
+
+* cjs entry ([1642475](https://github.com/qiwi/pijma-native/commit/164247584b6842e1ec73813a27b1404ec737dc85))
+* fix cjs bundles ([#2](https://github.com/qiwi/pijma-native/issues/2)) ([0ec354a](https://github.com/qiwi/pijma-native/commit/0ec354a1a3411943bd8071a549f8e4b401d9e438))
+
 ## [2.4.9](https://github.com/qiwi/pijma-native/compare/v2.4.8...v2.4.9) (2022-04-07)
 
 
