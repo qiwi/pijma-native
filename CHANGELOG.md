@@ -1,3 +1,10 @@
+## [2.4.8](https://github.com/qiwi/pijma-native/compare/v2.4.7...v2.4.8) (2022-04-07)
+
+
+### Bug Fixes
+
+* jsx preserve ([c38ed6e](https://github.com/qiwi/pijma-native/commit/c38ed6e633f394733fd567a5438795e1f6459cf0))
+
 ## [2.4.7](https://github.com/qiwi/pijma-native/compare/v2.4.6...v2.4.7) (2022-04-07)
 
 
