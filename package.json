@@ -6,13 +6,13 @@
   "type": "module",
   "sideEffects": false,
   "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
+  "module": "./lib/mjs/index.mjs",
   "types": "./lib/dts/index.d.ts",
-  "react-native": "./lib/jsx/index.js",
+  "react-native": "./lib/jsx/index.jsx",
   "exports": {
     ".": {
       "types": "./lib/dts/index.d.ts",
-      "import": "./lib/esm/index.js",
+      "import": "./lib/mjs/index.mjs",
       "require": "./lib/cjs/index.js"
     }
   },
@@ -26,10 +26,10 @@
   "scripts": {
     "clean": "rm -rf lib web/build",
     "build": "concurrently 'npm:build:*'",
-    "build:cjs": "tsc --project tsconfig.cjs.json",
-    "build:esm": "tsc --project tsconfig.esm.json && tsc-esm-fix --tsconfig tsconfig.esm.json",
+    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json --ext .mjs",
+    "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --tsconfig tsconfig.cjs.json --ext .cjs",
+    "build:jsx": "tsc --project tsconfig.jsx.json && tsc-esm-fix --tsconfig tsconfig.jsx.json --ext .jsx",
     "build:dts": "tsc --project tsconfig.dts.json",
-    "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
     "start": "styleguidist --config styleguide.config.cjs server --mode development",
     "test": "exit 0",
@@ -83,7 +83,7 @@
     "react-native-svg": "12.3.0",
     "react-native-web": "0.17.7",
     "react-styleguidist": "11.2.0",
-    "tsc-esm-fix": "2.9.0",
+    "tsc-esm-fix": "2.9.1",
     "tslib": "2.3.1",
     "typescript": "4.6.3",
     "webpack": "5.71.0"
