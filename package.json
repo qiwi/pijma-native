@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
-  "main": "./lib/cjs/index.js",
+  "main": "./lib/cjs/index.cjs",
   "module": "./lib/mjs/index.js",
   "types": "./lib/dts/index.d.ts",
   "react-native": "./lib/jsx/index.js",
@@ -13,7 +13,7 @@
     ".": {
       "types": "./lib/dts/index.d.ts",
       "import": "./lib/mjs/index.js",
-      "require": "./lib/cjs/index.js"
+      "require": "./lib/cjs/index.cjs"
     }
   },
   "publishConfig": {
