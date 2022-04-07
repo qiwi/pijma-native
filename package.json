@@ -28,7 +28,7 @@
     "build": "concurrently 'npm:build:*'",
     "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json --ext .mjs",
     "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --target lib/cjs --ext .cjs",
-    "build:jsx": "tsc --project tsconfig.jsx.json && tsc-esm-fix --tsconfig tsconfig.jsx.json --ext .jsx",
+    "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:dts": "tsc --project tsconfig.dts.json",
     "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
     "start": "styleguidist --config styleguide.config.cjs server --mode development",
