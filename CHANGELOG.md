@@ -1,3 +1,10 @@
+## [2.4.9](https://github.com/qiwi/pijma-native/compare/v2.4.8...v2.4.9) (2022-04-07)
+
+
+### Bug Fixes
+
+* revert tsc-esm-fix ([a69df46](https://github.com/qiwi/pijma-native/commit/a69df463f3290e7512275df8a5e3db20818f8e99))
+
 ## [2.4.8](https://github.com/qiwi/pijma-native/compare/v2.4.7...v2.4.8) (2022-04-07)
 
 
