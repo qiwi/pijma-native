@@ -6,13 +6,13 @@
   "type": "module",
   "sideEffects": false,
   "main": "./lib/cjs/index.js",
-  "module": "./lib/mjs/index.mjs",
+  "module": "./lib/mjs/index.js",
   "types": "./lib/dts/index.d.ts",
-  "react-native": "./lib/jsx/index.jsx",
+  "react-native": "./lib/jsx/index.js",
   "exports": {
     ".": {
       "types": "./lib/dts/index.d.ts",
-      "import": "./lib/mjs/index.mjs",
+      "import": "./lib/mjs/index.js",
       "require": "./lib/cjs/index.js"
     }
   },
@@ -26,8 +26,8 @@
   "scripts": {
     "clean": "rm -rf lib web/build",
     "build": "concurrently 'npm:build:*'",
-    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json --ext .mjs",
-    "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --tsconfig tsconfig.cjs.json --ext .cjs",
+    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
     "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:dts": "tsc --project tsconfig.dts.json",
     "build:rsg": "styleguidist --config styleguide.config.cjs build --mode production",
