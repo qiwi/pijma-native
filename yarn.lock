@@ -12150,7 +12150,7 @@ __metadata:
     react-native-svg: 12.3.0
     react-native-web: 0.17.7
     react-styleguidist: 11.2.0
-    tsc-esm-fix: 2.9.1
+    tsc-esm-fix: 2.11.0
     tslib: 2.3.1
     typescript: 4.6.3
     webpack: 5.71.0
@@ -15223,9 +15223,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsc-esm-fix@npm:2.9.1":
-  version: 2.9.1
-  resolution: "tsc-esm-fix@npm:2.9.1"
+"tsc-esm-fix@npm:2.11.0":
+  version: 2.11.0
+  resolution: "tsc-esm-fix@npm:2.11.0"
   dependencies:
     "@types/fs-extra": ^9.0.13
     fs-extra: ^10.0.1
@@ -15235,7 +15235,7 @@ __metadata:
     tslib: ^2.3.1
   bin:
     tsc-esm-fix: target/es6/cli.mjs
-  checksum: c5b26e9c8ec8e0184186ad03c52e4569ca051a809be304b23ff92b7b691c66aa092d12c26a5c1b5fc6e91ce6cd38e30907b8dd5636d3887d8cdfb8ce209f285c
+  checksum: cbe296cce16a8fa237803e6167e3d4ed32eda26ae07ca3de46d00d1d5018d7df68d8c52f56b213a8d1c17cdbf73b76d514d5843ef04837be07e0b8062b058b93
   languageName: node
   linkType: hard
 
