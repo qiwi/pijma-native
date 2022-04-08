@@ -1,3 +1,10 @@
+## [2.4.12](https://github.com/qiwi/pijma-native/compare/v2.4.11...v2.4.12) (2022-04-08)
+
+
+### Bug Fixes
+
+* import ([677fa0e](https://github.com/qiwi/pijma-native/commit/677fa0edc9e228e39c92000bcb6a022f55f4370f))
+
 ## [2.4.11](https://github.com/qiwi/pijma-native/compare/v2.4.10...v2.4.11) (2022-04-08)
 
 
