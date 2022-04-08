@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { useTheme } from '../hooks'
+import { useTheme } from './useTheme'
 
 export const useBreakpoints = () => {
   const { breakpoints } = useTheme()
