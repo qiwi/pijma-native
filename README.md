@@ -1,6 +1,6 @@
-Велосипед над [react-native](https://reactnative.dev)
+Wrapper around [react-native](https://reactnative.dev)
 
-## Равноправие
+## Styles are Props
 
 ### react-native
 
@@ -30,19 +30,15 @@
 >
 ```
 
-## Адаптация
+## Adaptive
 
 ### react-native
 
 ```tsx static
 import React from 'react'
-import { Provider, Theme } from 'pijma'
+import { Provider, Theme } from '@pijma/react-native'
 
-const Box = () => (
-  <View
-    style={view}
-  />
-)
+const Box = () => <View style={view} />
 
 const styles = StyleSheet.create({
   view: {
@@ -73,7 +69,7 @@ if (Dimensions.get('window').width > 400) {
 
 ```tsx static
 import React from 'react'
-import { Provider, Theme } from 'pijma'
+import { Provider, Theme } from '@pijma/react-native'
 
 const Box = () => (
   <View

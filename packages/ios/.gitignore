@@ -1,0 +1,10 @@
+/node_modules/
+/npm-debug.log
+/yarn-error.log
+
+/build/
+/DerivedData/
+/Pods/
+
+/Pijma.xcodeproj/project.xcworkspace/xcuserdata/
+/Pijma.xcworkspace/xcuserdata/
