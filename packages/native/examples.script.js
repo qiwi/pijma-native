@@ -14,9 +14,7 @@ const getProps =
 const chunkify =
   require('react-styleguidist/lib/loaders/utils/chunkify').default
 
-const config = getConfig(
-  path.resolve(__dirname, '..', 'web', 'styleguide.config.js'),
-)
+const config = getConfig(require.resolve('@pijma/web/styleguide.config.js'))
 
 const examplesDir = path.resolve(__dirname, 'src', 'examples')
 
@@ -204,6 +202,7 @@ function processSections(sections) {
 }
 
 function processStyleGuide() {
+  console.log('Generate native examples...')
   fs.rmSync(examplesDir, { recursive: true, force: true })
   processSections(
     filterComponentsWithExample(getSections(config.sections, config)),

@@ -12,20 +12,19 @@
   "homepage": "https://github.com/qiwi/pijma-native/#readme",
   "workspaces": {
     "packages": [
-      "apps/*",
       "packages/*"
     ]
   },
   "scripts": {
-    "web:start": "yarn workspace pijma-web start",
-    "web:build": "yarn workspace pijma-web build",
-    "web:clean": "yarn workspace pijma-web clean",
-    "android:setup": "yarn workspace pijma-android setup",
-    "android:start": "yarn workspace pijma-android start",
-    "android:clean": "yarn workspace pijma-android clean",
-    "ios:setup": "yarn workspace pijma-ios setup",
-    "ios:start": "yarn workspace pijma-ios start",
-    "ios:clean": "yarn workspace pijma-ios clean",
+    "web:start": "yarn workspace @pijma/web start",
+    "web:build": "yarn workspace @pijma/web build",
+    "web:clean": "yarn workspace @pijma/web clean",
+    "android:setup": "yarn workspace @pijma/android setup",
+    "android:start": "yarn workspace @pijma/android start",
+    "android:clean": "yarn workspace @pijma/android clean",
+    "ios:setup": "yarn workspace @pijma/ios setup",
+    "ios:start": "yarn workspace @pijma/ios start",
+    "ios:clean": "yarn workspace @pijma/ios clean",
     "clean": "yarn workspaces foreach -pt run clean",
     "build": "yarn workspaces foreach -pt run build",
     "style": "yarn workspaces foreach -pt run style",
