@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [FlatList](https://reactnative.dev/docs/flatlist)
+Wrapper around [FlatList](https://reactnative.dev/docs/flatlist)
 
 ```jsx
 import React, { useState } from 'react'

@@ -1,6 +1,6 @@
-Велосипед над [react-native](https://reactnative.dev)
+Wrapper around [react-native](https://reactnative.dev)
 
-## Равноправие
+## Styles are Props
 
 ### react-native
 
@@ -30,7 +30,7 @@
 >
 ```
 
-## Адаптация
+## Adaptive
 
 ### react-native
 

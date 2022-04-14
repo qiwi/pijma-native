@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [Pressable](https://reactnative.dev/docs/pressable)
+Wrapper around [Pressable](https://reactnative.dev/docs/pressable)
 
 ```jsx
 import React from 'react'

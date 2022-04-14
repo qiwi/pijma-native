@@ -1,6 +1,6 @@
-Велосипед над нативным компонентом [View](https://reactnative.dev/docs/view)
+Wrapper around [View](https://reactnative.dev/docs/view)
 
-## Простой блок
+## Simple
 
 ```jsx
 import React from 'react'
@@ -8,7 +8,7 @@ import { View } from '@pijma/react-native'
 ;<View backgroundColor="gray" width={200} height={200} />
 ```
 
-## Адаптивный блок
+## Adaptive
 
 ```jsx
 import React from 'react'
@@ -20,7 +20,7 @@ import { View } from '@pijma/react-native'
 />
 ```
 
-## Ссылка
+## Link
 
 ```jsx
 import React from 'react'
@@ -41,7 +41,7 @@ import { Pressable, View } from '@pijma/react-native'
 </Pressable>
 ```
 
-## Анимация
+## Animation
 
 ```jsx
 import React from 'react'

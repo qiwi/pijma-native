@@ -5,9 +5,7 @@ import { Markdown } from '../../Markdown'
 export const ModalExample0 = () => {
   return (
     <Markdown>
-      {
-        'Велосипед над нативным компонентом [Modal](https://reactnative.dev/docs/modal)'
-      }
+      {'Wrapper around [Modal](https://reactnative.dev/docs/modal)'}
     </Markdown>
   )
 }

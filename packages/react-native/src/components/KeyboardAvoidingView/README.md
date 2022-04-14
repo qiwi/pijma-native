@@ -1,1 +1,1 @@
-Велосипед над нативным компонентом [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview)
+Wrapper around [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview)

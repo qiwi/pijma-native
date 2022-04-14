@@ -6,7 +6,7 @@ export const KeyboardAvoidingViewExample0 = () => {
   return (
     <Markdown>
       {
-        'Велосипед над нативным компонентом [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview)'
+        'Wrapper around [KeyboardAvoidingView](https://reactnative.dev/docs/keyboardavoidingview)'
       }
     </Markdown>
   )

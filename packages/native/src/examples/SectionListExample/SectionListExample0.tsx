@@ -5,9 +5,7 @@ import { Markdown } from '../../Markdown'
 export const SectionListExample0 = () => {
   return (
     <Markdown>
-      {
-        'Велосипед над нативным компонентом [SectionList](https://reactnative.dev/docs/sectionlist)'
-      }
+      {'Wrapper around [SectionList](https://reactnative.dev/docs/sectionlist)'}
     </Markdown>
   )
 }

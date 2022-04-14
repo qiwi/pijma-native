@@ -1,6 +1,6 @@
-Велосипед над нативным компонентом [ImageBackground](https://reactnative.dev/docs/imagebackground)
+Wrapper around [ImageBackground](https://reactnative.dev/docs/imagebackground)
 
-## Простое фоновое изображение
+## Simple
 
 ```jsx
 import React from 'react'
@@ -32,7 +32,7 @@ import { ImageBackground, Text } from '@pijma/react-native'
 </ImageBackground>
 ```
 
-## Адаптивное фоновое изображение
+## Adaptive
 
 ```jsx
 import React from 'react'

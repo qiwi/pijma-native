@@ -1,1 +1,1 @@
-Велосипед над нативным компонентом [TouchableOpacity](https://reactnative.dev/docs/touchableopacity)
+Wrapper around [TouchableOpacity](https://reactnative.dev/docs/touchableopacity)

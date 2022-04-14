@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [ActivityIndicator](https://reactnative.dev/docs/activityindicator)
+Wrapper around [ActivityIndicator](https://reactnative.dev/docs/activityindicator)
 
 ```jsx
 import React from 'react'

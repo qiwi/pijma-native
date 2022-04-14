@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [Switch](https://reactnative.dev/docs/switch)
+Wrapper around [Switch](https://reactnative.dev/docs/switch)
 
 ```jsx
 import React, { useState } from 'react'

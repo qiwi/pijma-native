@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [ScrollView](https://reactnative.dev/docs/scrollview)
+Wrapper around [ScrollView](https://reactnative.dev/docs/scrollview)
 
 ```jsx
 import React from 'react'

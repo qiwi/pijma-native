@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [VirtualizedList](https://reactnative.dev/docs/virtualizedlist)
+Wrapper around [VirtualizedList](https://reactnative.dev/docs/virtualizedlist)
 
 ```jsx
 import React from 'react'

@@ -1,6 +1,6 @@
-Велосипед над нативным компонентом [Image](https://reactnative.dev/docs/image)
+Wrapper around [Image](https://reactnative.dev/docs/image)
 
-## Простая картинка
+## Simple
 
 ```jsx
 import React from 'react'
@@ -14,7 +14,7 @@ import { Image } from '@pijma/react-native'
 />
 ```
 
-## Адаптивная картинка
+## Basic
 
 ```jsx
 import React from 'react'

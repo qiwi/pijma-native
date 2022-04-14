@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [Modal](https://reactnative.dev/docs/modal)
+Wrapper around [Modal](https://reactnative.dev/docs/modal)
 
 ```jsx
 import React, { useState } from 'react'

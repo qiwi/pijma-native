@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [TextInput](https://reactnative.dev/docs/textinput)
+Wrapper around [TextInput](https://reactnative.dev/docs/textinput)
 
 ```jsx
 import React, { useState } from 'react'

@@ -1,4 +1,4 @@
-Велосипед над нативным компонентом [SectionList](https://reactnative.dev/docs/sectionlist)
+Wrapper around [SectionList](https://reactnative.dev/docs/sectionlist)
 
 ```jsx
 import React from 'react'
