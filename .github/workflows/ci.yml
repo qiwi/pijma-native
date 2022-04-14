@@ -35,7 +35,7 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       - name: Install
-        run: yarn
+        run: yarn install
       - name: Build
         run: yarn build
       - name: Release
@@ -47,4 +47,4 @@ jobs:
           GIT_COMMITTER_EMAIL: 'opensource@qiwi.com'
           GIT_AUTHOR_NAME: '@qiwibot'
           GIT_COMMITTER_NAME: '@qiwibot'
-        run: npx -p @qiwi/semrel-toolkit multi-semrel --no-ignore-private
+        run: yarn release

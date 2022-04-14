@@ -10,11 +10,9 @@
     "url": "https://github.com/qiwi/pijma-native/issues"
   },
   "homepage": "https://github.com/qiwi/pijma-native/#readme",
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "web:start": "yarn workspace @pijma/web start",
     "web:build": "yarn workspace @pijma/web build",
@@ -28,7 +26,11 @@
     "clean": "yarn workspaces foreach -pt run clean",
     "build": "yarn workspaces foreach -pt run build",
     "style": "yarn workspaces foreach -pt run style",
-    "test": "exit 0"
+    "test": "exit 0",
+    "release": "multi-semrel --no-ignore-private"
+  },
+  "devDependencies": {
+    "@qiwi/semrel-toolkit": "3.2.9"
   },
   "packageManager": "yarn@3.2.0"
 }
