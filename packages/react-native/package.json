@@ -16,6 +16,14 @@
       "require": "./lib/cjs/index.cjs"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/pijma-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/pijma-native/issues"
+  },
+  "homepage": "https://github.com/qiwi/pijma-native/#readme",
   "publishConfig": {
     "access": "public"
   },

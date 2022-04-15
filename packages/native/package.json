@@ -4,6 +4,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "react-native": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/pijma-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/pijma-native/issues"
+  },
+  "homepage": "https://github.com/qiwi/pijma-native/#readme",
   "scripts": {
     "build": "node examples.script.js && eslint --fix src && prettier --loglevel silent --write src",
     "style": "eslint --fix src && prettier --loglevel silent --write src"

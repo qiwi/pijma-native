@@ -3,6 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qiwi/pijma-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiwi/pijma-native/issues"
+  },
+  "homepage": "https://github.com/qiwi/pijma-native/#readme",
   "scripts": {
     "setup": "pod install",
     "clean": "rm -rf build DerivedData Pods",
