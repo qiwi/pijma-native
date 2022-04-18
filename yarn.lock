@@ -2909,9 +2909,9 @@ __metadata:
   linkType: hard
 
 "@semrel-extra/npm@npm:^1.2.0":
-  version: 1.2.1
-  resolution: "@semrel-extra/npm@npm:1.2.1"
-  checksum: 45147ed65d82227659ba973dce33885cef50e2724d5f0abc8cdec9383b5e0328ac3bd1cfd221fe29d20346b7723eacd456fee6c68746f1466fd8ceaee2e0a66f
+  version: 1.2.2
+  resolution: "@semrel-extra/npm@npm:1.2.2"
+  checksum: 39fd8c6af5f70fffb2584a02c71d326d0b2a2e2caf4d779c1d6b23df40625baf15b8701b893844e9545cfa689b26ef161033cd822c9a7b6bf890b3dc34d5a7b7
   languageName: node
   linkType: hard
 
