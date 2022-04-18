@@ -2112,6 +2112,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pijma/pijma@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@pijma/pijma@workspace:."
+  dependencies:
+    "@qiwi/semrel-toolkit": 3.2.9
+  languageName: unknown
+  linkType: soft
+
 "@pijma/react-native-svg@0.0.0, @pijma/react-native-svg@workspace:packages/react-native-svg":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native-svg@workspace:packages/react-native-svg"
@@ -12352,14 +12360,6 @@ __metadata:
   checksum: 9c4e34278cb09987685fa5ef81499c82546c033713518f6441778fbec623fc708777fe8ac633097c72d88470d5963094076c7305cafc7ad340aae27cfacd856b
   languageName: node
   linkType: hard
-
-"pijma@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "pijma@workspace:."
-  dependencies:
-    "@qiwi/semrel-toolkit": 3.2.9
-  languageName: unknown
-  linkType: soft
 
 "pinkie-promise@npm:^2.0.0":
   version: 2.0.1
