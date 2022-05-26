@@ -2039,7 +2039,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pijma/android@workspace:packages/android"
   dependencies:
-    "@pijma/native": 0.0.0
+    "@pijma/native": 1.0.0
     eslint: 8.13.0
     eslint-config-prettier: 8.5.0
     eslint-config-qiwi: 1.16.1
@@ -2058,7 +2058,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pijma/ios@workspace:packages/ios"
   dependencies:
-    "@pijma/native": 0.0.0
+    "@pijma/native": 1.0.0
     eslint: 8.13.0
     eslint-config-prettier: 8.5.0
     eslint-config-qiwi: 1.16.1
@@ -2073,7 +2073,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/native@0.0.0, @pijma/native@workspace:packages/native":
+"@pijma/native@1.0.0, @pijma/native@workspace:packages/native":
   version: 0.0.0-use.local
   resolution: "@pijma/native@workspace:packages/native"
   dependencies:
@@ -2082,9 +2082,9 @@ __metadata:
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
     "@babel/runtime": 7.17.9
-    "@pijma/react-native": 0.0.0
-    "@pijma/react-native-svg": 0.0.0
-    "@pijma/web": 0.0.0
+    "@pijma/react-native": 1.0.0
+    "@pijma/react-native-svg": 1.0.0
+    "@pijma/web": 1.0.0
     "@react-navigation/bottom-tabs": 6.3.1
     "@react-navigation/drawer": 6.4.1
     "@react-navigation/native": 6.0.10
@@ -2120,7 +2120,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native-svg@0.0.0, @pijma/react-native-svg@workspace:packages/react-native-svg":
+"@pijma/react-native-svg@1.0.0, @pijma/react-native-svg@workspace:packages/react-native-svg":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native-svg@workspace:packages/react-native-svg"
   dependencies:
@@ -2149,14 +2149,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native@npm:0.0.0":
-  version: 0.0.0
-  resolution: "@pijma/react-native@npm:0.0.0"
-  checksum: 288ced239f6930a1255daeed551d43934cbf36e326db42bedf394c53dd116340436e18c6dcdc9a0ff0fb51fefd7f38bf962c821226c2da2483286698d6589d60
-  languageName: node
-  linkType: hard
-
-"@pijma/react-native@workspace:packages/react-native":
+"@pijma/react-native@1.0.0, @pijma/react-native@workspace:packages/react-native":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native@workspace:packages/react-native"
   dependencies:
@@ -2183,7 +2176,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/web@0.0.0, @pijma/web@workspace:packages/web":
+"@pijma/web@1.0.0, @pijma/web@workspace:packages/web":
   version: 0.0.0-use.local
   resolution: "@pijma/web@workspace:packages/web"
   dependencies:
@@ -2192,8 +2185,8 @@ __metadata:
     "@babel/preset-react": 7.16.7
     "@babel/preset-typescript": 7.16.7
     "@babel/runtime": 7.17.9
-    "@pijma/react-native": 0.0.0
-    "@pijma/react-native-svg": 0.0.0
+    "@pijma/react-native": 1.0.0
+    "@pijma/react-native-svg": 1.0.0
     "@qiwi/esm": 1.1.1
     "@types/react": 17.0.44
     "@types/react-dom": 17.0.15
