@@ -1,7 +1,7 @@
 {
   "name": "@pijma/ios",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "start": "react-native start --reset-cache & react-native run-ios --project-path . --no-packager"
   },
   "dependencies": {
-    "@pijma/native": "0.0.0",
+    "@pijma/native": "1.0.0",
     "eslint": "8.13.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-qiwi": "1.16.1",
