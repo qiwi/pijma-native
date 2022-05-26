@@ -2143,6 +2143,7 @@ __metadata:
     prettier: "npm:2.6.2"
     prettier-config-qiwi: "npm:1.7.1"
     react: "npm:17.0.2"
+    react-dom: "npm:17.0.2"
     react-native: "npm:0.68.2"
     react-native-gesture-handler: "npm:2.4.2"
     react-native-monorepo-tools: "npm:1.1.4"
