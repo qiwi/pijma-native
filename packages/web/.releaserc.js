@@ -13,5 +13,11 @@ module.exports = {
         },
       },
     ],
+    [
+      '@semrel-extra/npm',
+      {
+        npmPublish: false,
+      },
+    ],
   ],
 }

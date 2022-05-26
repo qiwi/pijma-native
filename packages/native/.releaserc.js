@@ -1,1 +1,11 @@
-module.exports = require('../../.releaserc.js')
+module.exports = {
+  extends: '@qiwi/semrel-config-monorepo',
+  plugins: [
+    [
+      '@semrel-extra/npm',
+      {
+        npmPublish: false,
+      },
+    ],
+  ],
+}
