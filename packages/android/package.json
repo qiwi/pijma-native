@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/qiwi/pijma-native/issues"
   },
-  "homepage": "https://github.com/qiwi/pijma-native/#readme",
+  "homepage": "https://qiwi.github.io/pijma-native/",
   "scripts": {
     "setup": "cd ../.. && jetify",
     "clean": "rm -rf .gradle build app/build",

@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/qiwi/pijma-native/issues"
   },
-  "homepage": "https://github.com/qiwi/pijma-native/#readme",
+  "homepage": "https://qiwi.github.io/pijma-native/",
   "scripts": {
     "build": "node examples.script.js && eslint --fix src && prettier --loglevel silent --write src",
     "style": "eslint --fix src && prettier --loglevel silent --write src"
