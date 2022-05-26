@@ -1,7 +1,7 @@
 {
   "name": "@pijma/web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf lib",
@@ -15,8 +15,8 @@
     "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
     "@babel/runtime": "7.17.9",
-    "@pijma/react-native": "0.0.0",
-    "@pijma/react-native-svg": "0.0.0",
+    "@pijma/react-native": "1.0.0",
+    "@pijma/react-native-svg": "1.0.0",
     "@qiwi/esm": "1.1.1",
     "@types/react": "17.0.44",
     "@types/react-dom": "17.0.15",
