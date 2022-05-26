@@ -1,7 +1,7 @@
 {
   "name": "@pijma/react-native-svg",
   "description": "Wrapper around react-native-svg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
