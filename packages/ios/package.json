@@ -18,16 +18,16 @@
   },
   "dependencies": {
     "@pijma/native": "1.0.0",
-    "eslint": "8.13.0",
+    "eslint": "8.16.0",
     "eslint-config-prettier": "8.5.0",
-    "eslint-config-qiwi": "1.16.1",
+    "eslint-config-qiwi": "1.17.1",
     "prettier": "2.6.2",
-    "prettier-config-qiwi": "1.6.1",
-    "react-native": "0.68.1",
-    "react-native-gesture-handler": "2.4.0",
+    "prettier-config-qiwi": "1.7.1",
+    "react-native": "0.68.2",
+    "react-native-gesture-handler": "2.4.2",
     "react-native-monorepo-tools": "1.1.4",
-    "react-native-reanimated": "2.7.0",
-    "react-native-safe-area-context": "4.2.4",
+    "react-native-reanimated": "2.8.0",
+    "react-native-safe-area-context": "4.2.5",
     "react-native-screens": "3.13.1"
   },
   "packageManager": "yarn@3.2.0"

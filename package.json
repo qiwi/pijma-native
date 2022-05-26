@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@qiwi/semrel-config-monorepo": "1.6.4",
-    "@qiwi/semrel-toolkit": "3.2.9"
+    "@qiwi/semrel-toolkit": "3.2.11"
   },
-  "packageManager": "yarn@3.2.0"
+  "packageManager": "yarn@4.0.0-rc.6"
 }
