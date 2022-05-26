@@ -2116,6 +2116,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pijma/pijma@workspace:."
   dependencies:
+    "@qiwi/semrel-config-monorepo": 1.6.4
     "@qiwi/semrel-toolkit": 3.2.9
   languageName: unknown
   linkType: soft
@@ -2249,6 +2250,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@qiwi/git-utils@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@qiwi/git-utils@npm:1.1.2"
+  dependencies:
+    "@antongolub/git-root": ^1.5.6
+    "@qiwi/semrel-common": 3.4.2
+    "@qiwi/substrate": ^1.20.12
+    "@types/node": ^17.0.31
+    debug: ^4.3.4
+    execa: ^6.1.0
+    file-url: ^4.0.0
+    nanoid: ^3.3.4
+    tempy: ^3.0.0
+    tslib: ^2.4.0
+  checksum: e20226d299459df4022364135be4c7470e6c184a9ef04ef248a8875dfba096fe6bb30f3e8928b3b4f233003fe1ff3ad6c4d6343ddc5a8f10c3580e5beef6c3d6
+  languageName: node
+  linkType: hard
+
 "@qiwi/multi-semantic-release@npm:~6.1.1":
   version: 6.1.1
   resolution: "@qiwi/multi-semantic-release@npm:6.1.1"
@@ -2317,12 +2336,37 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@qiwi/semrel-common@npm:3.4.2":
+  version: 3.4.2
+  resolution: "@qiwi/semrel-common@npm:3.4.2"
+  dependencies:
+    "@qiwi/substrate": ^1.20.12
+    "@types/node": ^17.0.31
+    "@types/semantic-release": ^17.2.3
+    lodash-es: ^4.17.21
+    minimist: ^1.2.6
+    tslib: ^2.4.0
+  checksum: befac4929526187744131c1e15b2a3bf079a4ce3cf40587a268fa354d46184d7dfc9f6036f5cf8c7d9c946decb3d5662f3f5e0c972cb958edcc3bbfcf2c08bae
+  languageName: node
+  linkType: hard
+
 "@qiwi/semrel-config-monorepo@npm:1.6.3":
   version: 1.6.3
   resolution: "@qiwi/semrel-config-monorepo@npm:1.6.3"
   dependencies:
     "@qiwi/semrel-preset": 3.1.9
   checksum: ce7ec7d1e8e3f46fe1597748c089ced9f5f663e898aa1fcf81278a7c61b22b34bdb1bd4c77f32dbdf4047d6f1ac49c3e5f15edf68b6d375289b35c208b898a47
+  languageName: node
+  linkType: hard
+
+"@qiwi/semrel-config-monorepo@npm:1.6.4":
+  version: 1.6.4
+  resolution: "@qiwi/semrel-config-monorepo@npm:1.6.4"
+  dependencies:
+    "@qiwi/semrel-preset": 3.1.10
+  peerDependencies:
+    semantic-release: "*"
+  checksum: 7db568e117fba11a5c72399053e34357da8d745d0cffa7df35098e106a1ef412340419206775f2d2ad38620ffbf0a20e4825fe73edbcf88995da7285716cfbdd
   languageName: node
   linkType: hard
 
@@ -2354,6 +2398,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@qiwi/semrel-metabranch@npm:3.1.2":
+  version: 3.1.2
+  resolution: "@qiwi/semrel-metabranch@npm:3.1.2"
+  dependencies:
+    "@qiwi/esm": ^1.1.1
+    "@qiwi/git-utils": 1.1.2
+    "@qiwi/semrel-common": 3.4.2
+    "@qiwi/semrel-plugin-creator": 2.3.2
+    "@types/node": ^17.0.31
+    "@types/semantic-release": ^17.2.3
+    execa: ^6.1.0
+    fs-extra: ^10.1.0
+    globby: ^13.1.1
+    tempy: ^3.0.0
+    tslib: ^2.4.0
+  checksum: 9b89b4c4527e6da67ee0e78e4cdc2ff076304a5803988f7d665f0b9bc1ad25f338fbda44aa1d0e43cfd331ca3df643c44b5d4b6982b85afb71c3e4928e8c9fd5
+  languageName: node
+  linkType: hard
+
 "@qiwi/semrel-plugin-creator@npm:2.3.1":
   version: 2.3.1
   resolution: "@qiwi/semrel-plugin-creator@npm:2.3.1"
@@ -2366,6 +2429,41 @@ __metadata:
     lodash-es: ^4.17.21
     tslib: ^2.3.1
   checksum: ec478350be63b177ad008ce6199d2029b164c7c9b94d6a485eb932ede9e389fddbed735a1fa2bdfb8ac2f0d77405c6aa1a18f743f6c1793242104ebcb1e88fae
+  languageName: node
+  linkType: hard
+
+"@qiwi/semrel-plugin-creator@npm:2.3.2":
+  version: 2.3.2
+  resolution: "@qiwi/semrel-plugin-creator@npm:2.3.2"
+  dependencies:
+    "@qiwi/esm": ^1.1.1
+    "@types/lodash-es": ^4.17.6
+    "@types/node": ^17.0.31
+    "@types/semantic-release": ^17.2.3
+    debug: ^4.3.4
+    lodash-es: ^4.17.21
+    tslib: ^2.4.0
+  checksum: 9f80c47c1e18c95a311bc191d652d3d360c17b7bfd0b4c44c9704bdebf66e07ce1bc5d2d3845a85a9d543654671430d6a89b77b3fec5bfea89499386278d0e1c
+  languageName: node
+  linkType: hard
+
+"@qiwi/semrel-preset@npm:3.1.10":
+  version: 3.1.10
+  resolution: "@qiwi/semrel-preset@npm:3.1.10"
+  dependencies:
+    "@qiwi/semantic-release-gh-pages-plugin": ^5.2.0
+    "@qiwi/semrel-metabranch": 3.1.2
+    "@semantic-release/changelog": ^6.0.1
+    "@semantic-release/commit-analyzer": ^9.0.2
+    "@semantic-release/exec": ^6.0.3
+    "@semantic-release/git": ^10.0.1
+    "@semantic-release/github": ^8.0.4
+    "@semantic-release/npm": ^9.0.1
+    "@semantic-release/release-notes-generator": ^10.0.3
+    "@semrel-extra/npm": ^1.2.2
+  peerDependencies:
+    semantic-release: "*"
+  checksum: 732ea4eab65dd3d7abb798623a9d986b9e8b3b4fa87b0125b6fbe33878b14e8fc87489e1ff7892ed907e74fb838c90482d7614ae7ee80fa05e296e6f246d38ed
   languageName: node
   linkType: hard
 
@@ -2908,7 +3006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semrel-extra/npm@npm:^1.2.0":
+"@semrel-extra/npm@npm:^1.2.0, @semrel-extra/npm@npm:^1.2.2":
   version: 1.2.2
   resolution: "@semrel-extra/npm@npm:1.2.2"
   checksum: 39fd8c6af5f70fffb2584a02c71d326d0b2a2e2caf4d779c1d6b23df40625baf15b8701b893844e9545cfa689b26ef161033cd822c9a7b6bf890b3dc34d5a7b7
@@ -3182,6 +3280,13 @@ __metadata:
   version: 12.20.48
   resolution: "@types/node@npm:12.20.48"
   checksum: 48bd705bda1af2332c50fb24819bba7b0eac791b07c24c098c39b10940170a53bd3c4755aedc3409c7114c539f1f86ea657aa6838d164fd135e3b89b9f9aa772
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^17.0.31":
+  version: 17.0.35
+  resolution: "@types/node@npm:17.0.35"
+  checksum: 7a24946ae7fd20267ed92466384f594e448bfb151081158d565cc635d406ecb29ea8fb85fcd2a1f71efccf26fb5bd3c6f509bde56077eb8b832b847a6664bc62
   languageName: node
   linkType: hard
 
@@ -7562,7 +7667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.0.0, fs-extra@npm:^10.0.1":
+"fs-extra@npm:^10.0.0, fs-extra@npm:^10.0.1, fs-extra@npm:^10.1.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
   dependencies:
@@ -11164,6 +11269,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: ada019402a07464a694553c61d2dca8a4353645a7d92f2830f0d487fedff403678a0bee5323a46522752b2eab95a0bc3da98b6cccaa7c0c55cd9975130e6d6f0
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.4":
+  version: 3.3.4
+  resolution: "nanoid@npm:3.3.4"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
   languageName: node
   linkType: hard
 
@@ -15141,6 +15255,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tempy@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "tempy@npm:3.0.0"
+  dependencies:
+    is-stream: ^3.0.0
+    temp-dir: ^2.0.0
+    type-fest: ^2.12.2
+    unique-string: ^3.0.0
+  checksum: 52138bfda3854b09cef5b4ded773e4daeebc910888d5d3bbc348adcc5f935661e07b1b1ba291e3bbb5b4f42c6e04f912b80a0d37812cf8940bdf271f18f7364d
+  languageName: node
+  linkType: hard
+
 "terser-webpack-plugin@npm:^4.1.0":
   version: 4.2.3
   resolution: "terser-webpack-plugin@npm:4.2.3"
@@ -15494,6 +15620,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
 "tsutils@npm:^3.21.0":
   version: 3.21.0
   resolution: "tsutils@npm:3.21.0"
@@ -15583,6 +15716,13 @@ __metadata:
   version: 2.12.2
   resolution: "type-fest@npm:2.12.2"
   checksum: ee69676da1f69d2b14bbec28c7b95220a3221ab14093f54bde179c59e185a80470859553eada535ec35d8637a245c2f0efe9d7c99cc46a43f3b4c7ef64db7957
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^2.12.2":
+  version: 2.13.0
+  resolution: "type-fest@npm:2.13.0"
+  checksum: 3492384f759fdeaec7eaa07e79f70e777bf825cf8892690642fa9350818df4a8c50fd697fd1239ae7026064af4dd94e4d5eca27e781e0952ff302af0708a2e69
   languageName: node
   linkType: hard
 

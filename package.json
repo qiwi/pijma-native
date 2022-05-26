@@ -30,6 +30,7 @@
     "release": "multi-semrel --no-ignore-private"
   },
   "devDependencies": {
+    "@qiwi/semrel-config-monorepo": "1.6.4",
     "@qiwi/semrel-toolkit": "3.2.9"
   },
   "packageManager": "yarn@3.2.0"

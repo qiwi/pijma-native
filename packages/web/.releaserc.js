@@ -1,5 +1,5 @@
 module.exports = {
-  branch: 'master',
+  extends: '@qiwi/semrel-config-monorepo',
   plugins: [
     [
       '@qiwi/semrel-metabranch',
@@ -13,10 +13,5 @@ module.exports = {
         },
       },
     ],
-    '@semantic-release/commit-analyzer',
-    '@semantic-release/release-notes-generator',
-    '@semantic-release/changelog',
-    '@semantic-release/github',
-    '@semantic-release/git',
   ],
 }
