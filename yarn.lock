@@ -2149,7 +2149,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native@0.0.0, @pijma/react-native@workspace:packages/react-native":
+"@pijma/react-native@npm:0.0.0":
+  version: 0.0.0
+  resolution: "@pijma/react-native@npm:0.0.0"
+  checksum: 288ced239f6930a1255daeed551d43934cbf36e326db42bedf394c53dd116340436e18c6dcdc9a0ff0fb51fefd7f38bf962c821226c2da2483286698d6589d60
+  languageName: node
+  linkType: hard
+
+"@pijma/react-native@workspace:packages/react-native":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native@workspace:packages/react-native"
   dependencies:
