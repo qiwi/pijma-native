@@ -2139,9 +2139,9 @@ __metadata:
     "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@babel/runtime": "npm:7.18.3"
-    "@pijma/react-native": "npm:1.0.0"
-    "@pijma/react-native-svg": "npm:1.0.0"
-    "@pijma/web": "link:../web"
+    "@pijma/react-native": "npm:1.0.1"
+    "@pijma/react-native-svg": "npm:1.0.1"
+    "@pijma/web": "npm:1.0.2"
     "@react-navigation/bottom-tabs": "npm:6.3.1"
     "@react-navigation/drawer": "npm:6.4.1"
     "@react-navigation/native": "npm:6.0.10"
@@ -2181,19 +2181,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native-svg@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@pijma/react-native-svg@npm:1.0.0"
-  peerDependencies:
-    react: ">=17.0.0"
-    react-dom: ">=17.0.0"
-    react-native: ">=0.50.0"
-    react-native-svg: ">=12.0.0"
-    tslib: ">=2.0.0"
-  checksum: dc733e5963c84fbc4602f1e38137c4b1d223e06b7e13c575e55e40079fa8094c1fd54a25df7d01149b798951e272041c9911b373a077a176c483ad5f01047d3e
-  languageName: node
-  linkType: hard
-
 "@pijma/react-native-svg@npm:1.0.1, @pijma/react-native-svg@workspace:packages/react-native-svg":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native-svg@workspace:packages/react-native-svg"
@@ -2223,18 +2210,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@pijma/react-native@npm:1.0.0"
-  peerDependencies:
-    react: ">=17.0.0"
-    react-dom: ">=17.0.0"
-    react-native: ">=0.50.0"
-    tslib: ">=2.0.0"
-  checksum: 204b01c20088f0c96bd533c39f7a0d752da1c304c83e2333a656f7ea0d5c79e995b94f6befaa565092e7a38ff8ccbb0e69eca492985a5383e4a051bc45d77de4
-  languageName: node
-  linkType: hard
-
 "@pijma/react-native@npm:1.0.1, @pijma/react-native@workspace:packages/react-native":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native@workspace:packages/react-native"
@@ -2262,13 +2237,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/web@link:../web::locator=%40pijma%2Fnative%40workspace%3Apackages%2Fnative":
-  version: 0.0.0-use.local
-  resolution: "@pijma/web@link:../web::locator=%40pijma%2Fnative%40workspace%3Apackages%2Fnative"
-  languageName: node
-  linkType: soft
-
-"@pijma/web@workspace:packages/web":
+"@pijma/web@npm:1.0.2, @pijma/web@workspace:packages/web":
   version: 0.0.0-use.local
   resolution: "@pijma/web@workspace:packages/web"
   dependencies:
