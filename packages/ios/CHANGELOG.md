@@ -1,3 +1,21 @@
+## @pijma/ios [1.0.1](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.0.0...@pijma/ios@1.0.1) (2022-05-27)
+
+
+### Bug Fixes
+
+* add more deps ([7cc6c85](https://github.com/qiwi/pijma-native/commit/7cc6c85c6e023b4822a72c7c942484bb420cb4f7))
+* deps ([c27554b](https://github.com/qiwi/pijma-native/commit/c27554b0a49feea0953fac6970c907d2992fee32))
+* local private deps ([e72d1ca](https://github.com/qiwi/pijma-native/commit/e72d1ca1debe2bc8cf19ae7114986de249dae28f))
+* up all deps ([921f7f8](https://github.com/qiwi/pijma-native/commit/921f7f875b489b55b56436ac1c705ff8296f268c))
+
+
+
+
+
+### Dependencies
+
+* **@pijma/native:** upgraded to 1.0.2
+
 # @pijma/ios 1.0.0 (2022-05-26)
 
 
