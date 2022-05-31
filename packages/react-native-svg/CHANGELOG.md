@@ -1,3 +1,10 @@
+## @pijma/react-native-svg [1.0.3](https://github.com/qiwi/pijma-native/compare/@pijma/react-native-svg@1.0.2...@pijma/react-native-svg@1.0.3) (2022-05-31)
+
+
+### Bug Fixes
+
+* no mjs and cjs extensions ([9b199c4](https://github.com/qiwi/pijma-native/commit/9b199c4f42c1861994f7a6548265dc66e9039f9a))
+
 ## @pijma/react-native-svg [1.0.2](https://github.com/qiwi/pijma-native/compare/@pijma/react-native-svg@1.0.1...@pijma/react-native-svg@1.0.2) (2022-05-27)
 
 ## @pijma/react-native-svg [1.0.1](https://github.com/qiwi/pijma-native/compare/@pijma/react-native-svg@1.0.0...@pijma/react-native-svg@1.0.1) (2022-05-26)
