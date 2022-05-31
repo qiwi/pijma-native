@@ -34,8 +34,8 @@
   "scripts": {
     "clean": "rm -rf lib",
     "build": "concurrently 'npm:build:*'",
-    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json --ext .mjs",
-    "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --target lib/cjs --ext .cjs",
+    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --target lib/cjs",
     "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:dts": "tsc --project tsconfig.dts.json",
     "style": "eslint --fix src examples && prettier --loglevel silent --write src examples"
