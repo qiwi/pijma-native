@@ -1,3 +1,13 @@
+## @pijma/android [1.0.3](https://github.com/qiwi/pijma-native/compare/@pijma/android@1.0.2...@pijma/android@1.0.3) (2022-05-31)
+
+
+
+
+
+### Dependencies
+
+* **@pijma/native:** upgraded to 1.0.4
+
 ## @pijma/android [1.0.2](https://github.com/qiwi/pijma-native/compare/@pijma/android@1.0.1...@pijma/android@1.0.2) (2022-05-31)
 
 
