@@ -1,3 +1,14 @@
+## @pijma/web [1.0.4](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.0.3...@pijma/web@1.0.4) (2022-05-31)
+
+
+
+
+
+### Dependencies
+
+* **@pijma/react-native:** upgraded to 1.0.2
+* **@pijma/react-native-svg:** upgraded to 1.0.3
+
 ## @pijma/web [1.0.3](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.0.2...@pijma/web@1.0.3) (2022-05-31)
 
 
