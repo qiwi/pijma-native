@@ -1,7 +1,7 @@
 {
   "name": "@pijma/ios",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@babel/core": "7.18.2",
-    "@pijma/native": "1.0.3",
+    "@pijma/native": "1.0.4",
     "eslint": "8.16.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-qiwi": "1.17.1",
