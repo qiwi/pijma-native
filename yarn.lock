@@ -2197,7 +2197,7 @@ __metadata:
     react-dom: "npm:17.0.2"
     react-native: "npm:0.68.2"
     react-native-svg: "npm:12.3.0"
-    tsc-esm-fix: "npm:2.15.0"
+    tsc-esm-fix: "npm:2.15.1"
     tslib: "npm:2.4.0"
     typescript: "npm:4.7.2"
   peerDependencies:
@@ -2225,7 +2225,7 @@ __metadata:
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
     react-native: "npm:0.68.2"
-    tsc-esm-fix: "npm:2.15.0"
+    tsc-esm-fix: "npm:2.15.1"
     tslib: "npm:2.4.0"
     typescript: "npm:4.7.2"
   peerDependencies:
@@ -15533,9 +15533,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsc-esm-fix@npm:2.15.0":
-  version: 2.15.0
-  resolution: "tsc-esm-fix@npm:2.15.0"
+"tsc-esm-fix@npm:2.15.1":
+  version: 2.15.1
+  resolution: "tsc-esm-fix@npm:2.15.1"
   dependencies:
     "@types/fs-extra": "npm:^9.0.13"
     fs-extra: "npm:^10.1.0"
@@ -15545,7 +15545,7 @@ __metadata:
     tslib: "npm:^2.4.0"
   bin:
     tsc-esm-fix: target/es6/cli.mjs
-  checksum: cb4e26802557355a139b41dc0b1a226f559f49bb8e4971e13f0c63a9e5bcac82214756407f5d354f1a9b79f5ee811db8699709fb563c61661c3fef8aac4f4a5c
+  checksum: a3d55353fdc813ac5f007239be7f1d6b50fbe4856ffb1112a63afe9f7fe2b8a3d0b664aaf7b6e0ba57243fce78a4d30046698141f557692b3cc4b4e75f7f143d
   languageName: node
   linkType: hard
 
