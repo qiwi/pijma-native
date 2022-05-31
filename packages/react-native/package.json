@@ -1,7 +1,7 @@
 {
   "name": "@pijma/react-native",
   "description": "Wrapper around react-native",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
