@@ -2169,7 +2169,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native-svg@npm:1.0.1, @pijma/react-native-svg@workspace:packages/react-native-svg":
+"@pijma/react-native-svg@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@pijma/react-native-svg@npm:1.0.1"
+  peerDependencies:
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+    react-native: ">=0.50.0"
+    react-native-svg: ">=12.0.0"
+    tslib: ">=2.0.0"
+  checksum: 5c9483b583c2e892424ba7a48f0d7e6556a11c0411e856ce86b9f2996418b447aa701d555d6d9f398197d520f5aa31e26b1d4c24d850385521aa49e76da906d8
+  languageName: node
+  linkType: hard
+
+"@pijma/react-native-svg@workspace:packages/react-native-svg":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native-svg@workspace:packages/react-native-svg"
   dependencies:
