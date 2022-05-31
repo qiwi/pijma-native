@@ -1,3 +1,18 @@
+## @pijma/ios [1.0.2](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.0.1...@pijma/ios@1.0.2) (2022-05-31)
+
+
+### Bug Fixes
+
+* no exec ([3671929](https://github.com/qiwi/pijma-native/commit/36719296f34832466e4aea719fb948592fabab48))
+
+
+
+
+
+### Dependencies
+
+* **@pijma/native:** upgraded to 1.0.3
+
 ## @pijma/ios [1.0.1](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.0.0...@pijma/ios@1.0.1) (2022-05-27)
 
 
