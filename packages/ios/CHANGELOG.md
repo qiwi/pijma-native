@@ -1,3 +1,18 @@
+## @pijma/ios [1.0.5](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.0.4...@pijma/ios@1.0.5) (2022-06-01)
+
+
+### Bug Fixes
+
+* native guide ([b67f7b7](https://github.com/qiwi/pijma-native/commit/b67f7b74f2007c12c0f886d85d279beffd82cb36))
+
+
+
+
+
+### Dependencies
+
+* **@pijma/native:** upgraded to 1.0.6
+
 ## @pijma/ios [1.0.4](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.0.3...@pijma/ios@1.0.4) (2022-05-31)
 
 
