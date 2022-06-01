@@ -2091,7 +2091,7 @@ __metadata:
   resolution: "@pijma/android@workspace:packages/android"
   dependencies:
     "@babel/core": "npm:7.18.2"
-    "@pijma/native": "npm:1.0.4"
+    "@pijma/native": "npm:1.0.5"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-config-qiwi: "npm:1.17.1"
@@ -2104,6 +2104,7 @@ __metadata:
     react-native-reanimated: "npm:2.8.0"
     react-native-safe-area-context: "npm:4.2.5"
     react-native-screens: "npm:3.13.1"
+    react-native-svg: "npm:12.3.0"
   languageName: unknown
   linkType: soft
 
@@ -2112,7 +2113,7 @@ __metadata:
   resolution: "@pijma/ios@workspace:packages/ios"
   dependencies:
     "@babel/core": "npm:7.18.2"
-    "@pijma/native": "npm:1.0.4"
+    "@pijma/native": "npm:1.0.5"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
     eslint-config-qiwi: "npm:1.17.1"
@@ -2125,10 +2126,11 @@ __metadata:
     react-native-reanimated: "npm:2.8.0"
     react-native-safe-area-context: "npm:4.2.5"
     react-native-screens: "npm:3.13.1"
+    react-native-svg: "npm:12.3.0"
   languageName: unknown
   linkType: soft
 
-"@pijma/native@npm:1.0.4, @pijma/native@workspace:packages/native":
+"@pijma/native@npm:1.0.5, @pijma/native@workspace:packages/native":
   version: 0.0.0-use.local
   resolution: "@pijma/native@workspace:packages/native"
   dependencies:
@@ -2137,9 +2139,9 @@ __metadata:
     "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@babel/runtime": "npm:7.18.3"
-    "@pijma/react-native": "npm:1.0.2"
-    "@pijma/react-native-svg": "npm:1.0.3"
-    "@pijma/web": "npm:1.0.4"
+    "@pijma/react-native": "npm:1.0.3"
+    "@pijma/react-native-svg": "npm:1.0.4"
+    "@pijma/web": "npm:1.0.5"
     "@react-navigation/bottom-tabs": "npm:6.3.1"
     "@react-navigation/drawer": "npm:6.4.1"
     "@react-navigation/native": "npm:6.0.10"
@@ -2180,7 +2182,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native-svg@npm:1.0.3, @pijma/react-native-svg@workspace:packages/react-native-svg":
+"@pijma/react-native-svg@npm:1.0.4, @pijma/react-native-svg@workspace:packages/react-native-svg":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native-svg@workspace:packages/react-native-svg"
   dependencies:
@@ -2209,19 +2211,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@pijma/react-native@npm:1.0.2"
-  peerDependencies:
-    react: ">=17.0.0"
-    react-dom: ">=17.0.0"
-    react-native: ">=0.50.0"
-    tslib: ">=2.0.0"
-  checksum: 5466545b02cc2ad5d7ffdf76fe52cb198409d6a220937709257c38b7adb4a35d1d75bc47e3fa2b3db6f30087c5e3dc14a136433c5275be16a837b3f9e6f68379
-  languageName: node
-  linkType: hard
-
-"@pijma/react-native@workspace:packages/react-native":
+"@pijma/react-native@npm:1.0.3, @pijma/react-native@workspace:packages/react-native":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native@workspace:packages/react-native"
   dependencies:
@@ -2248,7 +2238,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/web@npm:1.0.4, @pijma/web@workspace:packages/web":
+"@pijma/web@npm:1.0.5, @pijma/web@workspace:packages/web":
   version: 0.0.0-use.local
   resolution: "@pijma/web@workspace:packages/web"
   dependencies:
@@ -2257,8 +2247,8 @@ __metadata:
     "@babel/preset-react": "npm:7.17.12"
     "@babel/preset-typescript": "npm:7.17.12"
     "@babel/runtime": "npm:7.18.3"
-    "@pijma/react-native": "npm:1.0.2"
-    "@pijma/react-native-svg": "npm:1.0.3"
+    "@pijma/react-native": "npm:1.0.3"
+    "@pijma/react-native-svg": "npm:1.0.4"
     "@qiwi/esm": "npm:1.1.1"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
@@ -3294,18 +3284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
-  version: 18.0.9
-  resolution: "@types/react@npm:18.0.9"
-  dependencies:
-    "@types/prop-types": "npm:*"
-    "@types/scheduler": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 3864b098db970680dc725535551b6cd185c197bfe69075e446e16f648ab26c108c0f4a899ad7ab03c8b18c8304f3624cb68e2d81da090dee08053a26ca4977f8
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:17.0.45, @types/react@npm:^17":
+"@types/react@npm:17.0.45":
   version: 17.0.45
   resolution: "@types/react@npm:17.0.45"
   dependencies:

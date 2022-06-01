@@ -8,6 +8,8 @@ import { KeyboardAvoidingViewExample } from './KeyboardAvoidingViewExample'
 import { ModalExample } from './ModalExample'
 import { PijmaExample } from './PijmaExample'
 import { PressableExample } from './PressableExample'
+import { ReactNativeExample } from './ReactNativeExample'
+import { ReactNativeSvgExample } from './ReactNativeSvgExample'
 import { SafeAreaViewExample } from './SafeAreaViewExample'
 import { ScrollViewExample } from './ScrollViewExample'
 import { SectionListExample } from './SectionListExample'
@@ -23,6 +25,7 @@ import { VirtualizedListExample } from './VirtualizedListExample'
 
 export const examples = {
   Pijma: PijmaExample,
+  ReactNative: ReactNativeExample,
   ActivityIndicator: ActivityIndicatorExample,
   DrawerLayoutAndroid: DrawerLayoutAndroidExample,
   FlatList: FlatListExample,
@@ -44,4 +47,5 @@ export const examples = {
   TouchableWithoutFeedback: TouchableWithoutFeedbackExample,
   View: ViewExample,
   VirtualizedList: VirtualizedListExample,
+  ReactNativeSvg: ReactNativeSvgExample,
 }

@@ -3,6 +3,8 @@
 const fs = require('fs')
 const path = require('path')
 
+const { camelCase, startCase } = require('lodash')
+
 const getConfig = require('react-styleguidist/lib/scripts/config').default
 
 const getSections =
@@ -172,40 +174,44 @@ function processComponents(components) {
 
 function processSection(section) {
   const file = section.content.require.split('!').pop()
+  const name = startCase(camelCase(section.name)).replace(/[^\w\d]/g, '')
 
-  processExample(`${section.name}Example`, file)
-  // processSections(section.sections || [])
+  if (file) {
+    processExample(`${name}Example`, file)
+  }
+
+  const sections = processSections(section.sections || [])
+
   const components = processComponents(section.components || [])
 
-  fs.writeFileSync(
-    path.resolve(examplesDir, 'index.ts'),
-    [
-      `import { ${section.name}Example } from './${section.name}Example'`,
-      ...components.map(
-        (component) =>
-          `import { ${component}Example } from './${component}Example'`,
-      ),
-      '',
-      `export const examples = {`,
-      `  ${section.name}: ${section.name}Example,`,
-      ...components.map((component) => `  ${component}: ${component}Example,`),
-      `}`,
-      ``,
-    ].join('\n'),
-  )
+  return [...(file ? [name] : []), ...sections, ...components]
 }
 
 function processSections(sections) {
-  sections.forEach((section) => {
-    processSection(section)
-  })
+  return sections.reduce(
+    (sections, section) => [...sections, ...processSection(section)],
+    [],
+  )
 }
 
 function processStyleGuide() {
   console.log('Generate native examples...')
   fs.rmSync(examplesDir, { recursive: true, force: true })
-  processSections(
+  const examples = processSections(
     filterComponentsWithExample(getSections(config.sections, config)),
+  )
+  fs.writeFileSync(
+    path.resolve(examplesDir, 'index.ts'),
+    [
+      ...examples.map(
+        (example) => `import { ${example}Example } from './${example}Example'`,
+      ),
+      '',
+      `export const examples = {`,
+      ...examples.map((example) => `  ${example}: ${example}Example,`),
+      `}`,
+      ``,
+    ].join('\n'),
   )
 }
 

@@ -19,6 +19,15 @@ Markdown.defaultProps = {
       div: {
         component: View,
       },
+      ul: {
+        component: View,
+      },
+      li: {
+        component: View,
+      },
+      ol: {
+        component: View,
+      },
       i: {
         component: Text,
         props: {
