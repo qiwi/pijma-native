@@ -1,3 +1,10 @@
+## @pijma/native [1.0.6](https://github.com/qiwi/pijma-native/compare/@pijma/native@1.0.5...@pijma/native@1.0.6) (2022-06-01)
+
+
+### Bug Fixes
+
+* native guide ([b67f7b7](https://github.com/qiwi/pijma-native/commit/b67f7b74f2007c12c0f886d85d279beffd82cb36))
+
 ## @pijma/native [1.0.5](https://github.com/qiwi/pijma-native/compare/@pijma/native@1.0.4...@pijma/native@1.0.5) (2022-05-31)
 
 
