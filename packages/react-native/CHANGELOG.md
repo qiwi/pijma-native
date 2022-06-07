@@ -1,3 +1,10 @@
+# @pijma/react-native [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/react-native@1.0.3...@pijma/react-native@1.1.0) (2022-06-07)
+
+
+### Features
+
+* refactoring ([649352a](https://github.com/qiwi/pijma-native/commit/649352a76422457b95a215df33d72e2ff9134b1a))
+
 ## @pijma/react-native [1.0.3](https://github.com/qiwi/pijma-native/compare/@pijma/react-native@1.0.2...@pijma/react-native@1.0.3) (2022-05-31)
 
 
