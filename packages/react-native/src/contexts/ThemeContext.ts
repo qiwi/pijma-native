@@ -2,6 +2,4 @@ import { createContext } from 'react'
 
 import { Theme } from '../Theme'
 
-export const ThemeContext = createContext<Theme>({
-  breakpoints: [0],
-})
+export const ThemeContext = createContext<Theme>({})

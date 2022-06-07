@@ -1,12 +1,8 @@
-import { Provider, Theme } from '@pijma/react-native'
+import { Provider } from '@pijma/react-native'
 import React, { FC } from 'react'
 
-const theme: Theme = {
-  breakpoints: [600, 1240],
-}
-
 export const Wrapper: FC = ({ children }) => (
-  <Provider theme={theme}>{children}</Provider>
+  <Provider breakpoints={[600, 1240]}>{children}</Provider>
 )
 
 export default Wrapper

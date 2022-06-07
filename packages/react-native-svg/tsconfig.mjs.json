@@ -1,12 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./src",
     "noEmit": false,
     "declaration": false,
-    "sourceMap": true,
+    "sourceMap": false,
+    "inlineSources": true,
+    "inlineSourceMap": true,
     "jsx": "react-jsx",
     "target": "es6",
     "module": "esnext",
-    "outDir": "lib/mjs"
+    "outDir": "./lib/mjs"
   }
 }

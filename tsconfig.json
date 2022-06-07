@@ -11,10 +11,10 @@
     "resolveJsonModule": true,
     "importHelpers": true,
     "removeComments": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@pijma/*": [
-        "packages/*/src"
+        "./packages/*/src"
       ]
     }
   }

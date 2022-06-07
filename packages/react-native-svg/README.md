@@ -5,7 +5,7 @@ No special magic... just reexporting components from `react-native-svg` with pre
 ```tsx
 import React from 'react'
 import { Svg, SvgCircle, SvgRect } from '@pijma/react-native-svg'
-;<Svg height="50%" width="50%" viewBox="0 0 100 100">
+;<Svg height="300" width="300" viewBox="0 0 100 100">
   <SvgCircle
     cx="50"
     cy="50"

@@ -379,7 +379,6 @@ export const styled = <Props, C extends ComponentType<ComponentProps<C>> = any>(
         {...Object.entries(createStyleSheet(allStyles)).reduce(
           (res, [key, value]) => ({
             ...res,
-
             ...{
               [key]: [
                 value,

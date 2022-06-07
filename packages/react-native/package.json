@@ -38,7 +38,7 @@
     "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --target lib/cjs --ext .cjs",
     "build:jsx": "tsc --project tsconfig.jsx.json",
     "build:dts": "tsc --project tsconfig.dts.json",
-    "style": "eslint --fix src examples && prettier --loglevel silent --write src examples"
+    "style": "eslint --fix src && prettier --loglevel silent --write src"
   },
   "peerDependencies": {
     "react": ">=17.0.0",
@@ -49,9 +49,9 @@
   "devDependencies": {
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
-    "@types/react-native": "0.67.7",
+    "@types/react-native": "0.67.8",
     "concurrently": "7.2.1",
-    "eslint": "8.16.0",
+    "eslint": "8.17.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-qiwi": "1.17.1",
     "prettier": "2.6.2",
@@ -59,9 +59,9 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
-    "tsc-esm-fix": "2.15.1",
+    "tsc-esm-fix": "2.18.0",
     "tslib": "2.4.0",
-    "typescript": "4.7.2"
+    "typescript": "4.7.3"
   },
   "packageManager": "yarn@3.2.0"
 }
