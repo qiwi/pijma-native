@@ -1,3 +1,13 @@
+## @pijma/ios [1.1.1](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.1.0...@pijma/ios@1.1.1) (2022-06-08)
+
+
+
+
+
+### Dependencies
+
+* **@pijma/native:** upgraded to 1.1.1
+
 # @pijma/ios [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.0.5...@pijma/ios@1.1.0) (2022-06-08)
 
 
