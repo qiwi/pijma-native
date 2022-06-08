@@ -6,35 +6,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.[cmjt]sx?$/,
+        test: /\.[jt]sx?$/,
         loader: 'babel-loader',
       },
     ],
   },
   resolve: {
-    mainFields: ['main'],
-    plugins: [
-      new TsconfigPathsPlugin({
-        mainFields: ['main'],
-      }),
-    ],
+    plugins: [new TsconfigPathsPlugin()],
     alias: {
       'react-native$': 'react-native-web',
-      'react/jsx-dev-runtime$': 'react/jsx-dev-runtime.js',
-      'react/jsx-runtime$': 'react/jsx-runtime.js',
-      'sockjs-client/dist/sockjs$': 'sockjs-client/lib/entry',
     },
     extensions: [
       '.web.ts',
       '.web.js',
-      '.web.tsx',
       '.web.jsx',
+      '.web.tsx',
       '.web.cjs',
       '.web.mjs',
       '.ts',
       '.js',
-      '.tsx',
       '.jsx',
+      '.tsx',
       '.cjs',
       '.mjs',
     ],
