@@ -1,3 +1,14 @@
+## @pijma/native [1.1.1](https://github.com/qiwi/pijma-native/compare/@pijma/native@1.1.0...@pijma/native@1.1.1) (2022-06-08)
+
+
+
+
+
+### Dependencies
+
+* **@pijma/react-native-svg:** upgraded to 1.1.1
+* **@pijma/web:** upgraded to 1.1.1
+
 # @pijma/native [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/native@1.0.6...@pijma/native@1.1.0) (2022-06-08)
 
 
