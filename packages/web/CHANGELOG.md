@@ -1,3 +1,23 @@
+# @pijma/web [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.0.5...@pijma/web@1.1.0) (2022-06-08)
+
+
+### Bug Fixes
+
+* build ([66065fb](https://github.com/qiwi/pijma-native/commit/66065fbd059def2bf3c989d30dcf03ddccce2c89))
+
+
+### Features
+
+* refactoring ([649352a](https://github.com/qiwi/pijma-native/commit/649352a76422457b95a215df33d72e2ff9134b1a))
+
+
+
+
+
+### Dependencies
+
+* **@pijma/react-native-svg:** upgraded to 1.1.0
+
 ## @pijma/web [1.0.5](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.0.4...@pijma/web@1.0.5) (2022-05-31)
 
 
