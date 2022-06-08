@@ -1,3 +1,18 @@
+# @pijma/android [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/android@1.0.5...@pijma/android@1.1.0) (2022-06-08)
+
+
+### Features
+
+* refactoring ([649352a](https://github.com/qiwi/pijma-native/commit/649352a76422457b95a215df33d72e2ff9134b1a))
+
+
+
+
+
+### Dependencies
+
+* **@pijma/native:** upgraded to 1.1.0
+
 ## @pijma/android [1.0.5](https://github.com/qiwi/pijma-native/compare/@pijma/android@1.0.4...@pijma/android@1.0.5) (2022-06-01)
 
 
