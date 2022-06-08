@@ -1,5 +1,4 @@
 export {
-  Svg,
   Rect as SvgRect,
   Circle as SvgCircle,
   Ellipse as SvgEllipse,
@@ -23,3 +22,5 @@ export {
   Marker as SvgMarker,
   ForeignObject as SvgForeignObject,
 } from 'react-native-svg'
+
+export * from 'react-native-svg'
