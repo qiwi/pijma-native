@@ -1,3 +1,10 @@
+## @pijma/react-native-svg [1.1.1](https://github.com/qiwi/pijma-native/compare/@pijma/react-native-svg@1.1.0...@pijma/react-native-svg@1.1.1) (2022-06-08)
+
+
+### Bug Fixes
+
+* export ([ef36568](https://github.com/qiwi/pijma-native/commit/ef36568bd4cc127c4ef07ea94bbee02a6ba65c26))
+
 # @pijma/react-native-svg [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/react-native-svg@1.0.4...@pijma/react-native-svg@1.1.0) (2022-06-08)
 
 
