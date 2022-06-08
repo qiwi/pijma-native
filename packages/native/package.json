@@ -1,7 +1,7 @@
 {
   "name": "@pijma/native",
   "private": true,
-  "version": "1.0.6",
+  "version": "1.1.0",
   "license": "MIT",
   "react-native": "./src/index.ts",
   "repository": {
@@ -22,9 +22,9 @@
     "@babel/preset-react": "7.17.12",
     "@babel/preset-typescript": "7.17.12",
     "@babel/runtime": "7.18.3",
-    "@pijma/react-native": "1.0.3",
-    "@pijma/react-native-svg": "1.0.4",
-    "@pijma/web": "1.0.5",
+    "@pijma/react-native": "1.1.0",
+    "@pijma/react-native-svg": "1.1.0",
+    "@pijma/web": "1.1.0",
     "@react-navigation/bottom-tabs": "6.3.1",
     "@react-navigation/drawer": "6.4.1",
     "@react-navigation/native": "6.0.10",
