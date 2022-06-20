@@ -1,7 +1,7 @@
 {
   "name": "@pijma/android",
   "private": true,
-  "version": "1.1.1",
+  "version": "1.2.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "build": "./gradlew --quiet --console plain assembleRelease"
   },
   "dependencies": {
-    "@pijma/kashka": "1.1.1",
+    "@pijma/kashka": "1.2.0",
     "babel-plugin-tsconfig-paths-module-resolver": "1.0.3",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
