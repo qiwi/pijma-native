@@ -1,6 +1,6 @@
 {
   "name": "@pijma/kashka",
-  "description": "Wrapper around react-native",
+  "description": "Pijma Kashka",
   "version": "1.2.0",
   "license": "MIT",
   "type": "module",
