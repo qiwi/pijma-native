@@ -16,7 +16,7 @@ module.exports = (env, { mode }) => ({
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].js',
     assetModuleFilename: '[name].[contenthash][ext]',
-    publicPath: '/',
+    publicPath: '/pijma-native/',
   },
   module: {
     rules: [
