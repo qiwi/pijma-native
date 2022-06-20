@@ -1,3 +1,10 @@
+# @pijma/react-native [1.2.0](https://github.com/qiwi/pijma-native/compare/@pijma/react-native@1.1.0...@pijma/react-native@1.2.0) (2022-06-20)
+
+
+### Features
+
+* kaska ([9d61f08](https://github.com/qiwi/pijma-native/commit/9d61f082fae96ea4c767257be107f657b8f6011a))
+
 # @pijma/react-native [1.1.0](https://github.com/qiwi/pijma-native/compare/@pijma/react-native@1.0.3...@pijma/react-native@1.1.0) (2022-06-07)
 
 
