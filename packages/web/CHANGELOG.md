@@ -1,3 +1,10 @@
+## @pijma/web [1.2.1](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.2.0...@pijma/web@1.2.1) (2022-06-20)
+
+
+### Bug Fixes
+
+* public path ([5d72b74](https://github.com/qiwi/pijma-native/commit/5d72b74479efce0b5db8570a3fd338d47c429c00))
+
 # @pijma/web [1.2.0](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.1.1...@pijma/web@1.2.0) (2022-06-20)
 
 
