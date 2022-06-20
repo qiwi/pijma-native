@@ -1,3 +1,13 @@
+## @pijma/ios [1.2.1](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.2.0...@pijma/ios@1.2.1) (2022-06-20)
+
+
+
+
+
+### Dependencies
+
+* **@pijma/kashka:** upgraded to 1.2.1
+
 # @pijma/ios [1.2.0](https://github.com/qiwi/pijma-native/compare/@pijma/ios@1.1.1...@pijma/ios@1.2.0) (2022-06-20)
 
 

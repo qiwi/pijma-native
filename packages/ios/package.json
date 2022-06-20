@@ -1,7 +1,7 @@
 {
   "name": "@pijma/ios",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "start": "react-native start --reset-cache & react-native run-ios --project-path . --no-packager"
   },
   "dependencies": {
-    "@pijma/kashka": "1.2.0",
+    "@pijma/kashka": "1.2.1",
     "babel-plugin-tsconfig-paths-module-resolver": "1.0.3",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
