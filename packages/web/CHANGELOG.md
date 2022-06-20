@@ -1,3 +1,13 @@
+## @pijma/web [1.2.2](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.2.1...@pijma/web@1.2.2) (2022-06-20)
+
+
+
+
+
+### Dependencies
+
+* **@pijma/kashka:** upgraded to 1.2.1
+
 ## @pijma/web [1.2.1](https://github.com/qiwi/pijma-native/compare/@pijma/web@1.2.0...@pijma/web@1.2.1) (2022-06-20)
 
 
