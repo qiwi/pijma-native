@@ -3,9 +3,7 @@ Wrapper around [Text](https://reactnative.dev/docs/text)
 ## Simple
 
 ```jsx
-import React from 'react'
-import { Text } from '@pijma/react-native'
-;<Text display="flex" color="gray" fontWeight="100" fontSize={24}>
+<Text display="flex" color="gray" fontWeight="100" fontSize={24}>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
   nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -18,9 +16,7 @@ import { Text } from '@pijma/react-native'
 ## Adaptive
 
 ```jsx
-import React from 'react'
-import { Text } from '@pijma/react-native'
-;<Text
+<Text
   display="flex"
   color={['red', 'green', 'blue']}
   fontWeight="100"
@@ -38,9 +34,7 @@ import { Text } from '@pijma/react-native'
 ## Link
 
 ```jsx
-import React from 'react'
-import { Pressable, Text } from '@pijma/react-native'
-;<Pressable>
+<Pressable>
   {({ hovered, pressed }) => (
     <Text
       color={hovered || pressed ? 'orange' : 'blue'}

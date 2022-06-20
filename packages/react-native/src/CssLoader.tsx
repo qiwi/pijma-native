@@ -1,6 +1,10 @@
 import React, { FC, useEffect } from 'react'
 
-export const CssLoader: FC<{ href: string }> = ({ href, children }) => {
+export interface CssLoaderProps {
+  href: string
+}
+
+export const CssLoader: FC<CssLoaderProps> = ({ href, children }) => {
   useEffect(() => {
     const link = document.createElement('link')
     link.rel = 'stylesheet'

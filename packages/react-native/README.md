@@ -59,7 +59,7 @@ const stylesLarge = StyleSheet.create({
 const Box = () => (
   <View
     style={
-      Dimensions.get('window').width > 400
+      Dimensions.get('window').width > 600
         ? StyleSheet.compose(styles.view, stylesLarge.view)
         : styles.view
     }
@@ -84,12 +84,8 @@ const Box = () => (
   />
 )
 
-const theme: Theme = {
-  breakpoints: [600, 1240],
-}
-
 const App = () => (
-  <Provider theme={theme}>
+  <Provider breakpoints={[600, 1240]}>
     <Box />
   </Provider>
 )

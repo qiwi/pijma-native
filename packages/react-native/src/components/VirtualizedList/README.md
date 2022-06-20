@@ -1,9 +1,7 @@
 Wrapper around [VirtualizedList](https://reactnative.dev/docs/virtualizedlist)
 
 ```jsx
-import React from 'react'
-import { VirtualizedList, View, Text } from '@pijma/react-native'
-;<VirtualizedList
+<VirtualizedList
   height={400}
   data={[]}
   initialNumToRender={4}

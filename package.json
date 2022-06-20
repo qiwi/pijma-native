@@ -19,25 +19,30 @@
     "web:clean": "yarn workspace @pijma/web clean",
     "android:setup": "yarn workspace @pijma/android setup",
     "android:start": "yarn workspace @pijma/android start",
+    "android:build": "yarn workspace @pijma/android build",
     "android:clean": "yarn workspace @pijma/android clean",
     "ios:setup": "yarn workspace @pijma/ios setup",
     "ios:start": "yarn workspace @pijma/ios start",
     "ios:clean": "yarn workspace @pijma/ios clean",
-    "clean": "yarn workspaces foreach -pt run clean",
-    "build": "yarn workspaces foreach -pt run build",
-    "style": "yarn workspaces foreach -pt run style",
+    "clean": "yarn workspaces foreach --parallel --topological-dev --no-private run clean",
+    "build": "yarn workspaces foreach --parallel --topological-dev --no-private run build",
+    "style": "yarn workspaces foreach --parallel --topological-dev --no-private run style",
     "test": "exit 0",
     "release": "multi-semantic-release --no-ignore-private"
   },
   "devDependencies": {
-    "@qiwi/multi-semantic-release": "6.4.0",
+    "@qiwi/multi-semantic-release": "6.5.1",
     "@qiwi/semrel-config-monorepo": "1.6.4",
     "@qiwi/semrel-preset": "3.1.10",
-    "semantic-release": "19.0.2"
+    "semantic-release": "19.0.3"
   },
   "resolutions": {
     "@types/react": "17.0.45",
-    "@types/react-dom": "17.0.17"
+    "@types/react-dom": "17.0.17",
+    "@types/react-native": "0.67.9",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "0.68.2"
   },
-  "packageManager": "yarn@4.0.0-rc.6"
+  "packageManager": "yarn@4.0.0-rc.9"
 }

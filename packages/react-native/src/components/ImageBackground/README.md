@@ -3,9 +3,7 @@ Wrapper around [ImageBackground](https://reactnative.dev/docs/imagebackground)
 ## Simple
 
 ```jsx
-import React from 'react'
-import { ImageBackground, Text } from '@pijma/react-native'
-;<ImageBackground
+<ImageBackground
   width={300}
   height={300}
   alignItems="center"
@@ -35,9 +33,7 @@ import { ImageBackground, Text } from '@pijma/react-native'
 ## Adaptive
 
 ```jsx
-import React from 'react'
-import { ImageBackground, Text } from '@pijma/react-native'
-;<ImageBackground
+<ImageBackground
   width={[300, 600, 800]}
   height={[300, 600, 800]}
   alignItems="center"

@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "lib": [
+      "es2021",
+      "dom"
+    ],
     "noEmit": true,
     "moduleResolution": "node",
     "jsx": "react-native",

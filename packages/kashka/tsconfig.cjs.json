@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noEmit": false,
+    "declaration": false,
+    "sourceMap": false,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "jsx": "react-jsx",
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./lib/cjs"
+  }
+}

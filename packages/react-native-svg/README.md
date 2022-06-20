@@ -3,9 +3,7 @@ Wrapper around [react-native-svg](https://github.com/react-native-svg/react-nati
 No special magic... just reexporting components from `react-native-svg` with prefix `Svg`
 
 ```tsx
-import React from 'react'
-import { Svg, SvgCircle, SvgRect } from '@pijma/react-native-svg'
-;<Svg height="300" width="300" viewBox="0 0 100 100">
+<Svg height="300" width="300" viewBox="0 0 100 100">
   <SvgCircle
     cx="50"
     cy="50"

@@ -1,9 +1,7 @@
 Wrapper around [ScrollView](https://reactnative.dev/docs/scrollview)
 
 ```jsx
-import React from 'react'
-import { ScrollView, Text } from '@pijma/react-native'
-;<ScrollView
+<ScrollView
   width="100%"
   height={300}
   maxHeight={300}

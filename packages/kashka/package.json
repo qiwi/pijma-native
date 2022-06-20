@@ -1,7 +1,7 @@
 {
-  "name": "@pijma/react-native",
+  "name": "@pijma/kashka",
   "description": "Wrapper around react-native",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -15,7 +15,9 @@
       "import": "./lib/mjs/index.mjs",
       "require": "./lib/cjs/index.cjs"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./loader.cjs": "./loader.cjs",
+    "./transformer.cjs": "./transformer.cjs"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,12 @@
   },
   "files": [
     "lib",
-    "README.md"
+    "README.md",
+    "generator.cjs",
+    "loader.cjs",
+    "transformer.cjs",
+    "find-up.cjs",
+    "read-pkg-up.cjs"
   ],
   "scripts": {
     "clean": "rm -rf lib",
@@ -42,6 +49,12 @@
     "style": "eslint --fix src && prettier --loglevel silent --write src"
   },
   "devDependencies": {
+    "@pijma/react-native": "1.1.0",
+    "@pijma/react-native-svg": "1.1.1",
+    "@react-navigation/bottom-tabs": "6.3.1",
+    "@react-navigation/drawer": "6.4.1",
+    "@react-navigation/native": "6.0.10",
+    "@react-navigation/native-stack": "6.6.2",
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
     "@types/react-native": "0.67.9",
@@ -49,22 +62,49 @@
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-qiwi": "1.17.1",
+    "markdown-to-jsx": "7.1.7",
     "prettier": "2.7.1",
     "prettier-config-qiwi": "1.7.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-live": "3.1.1",
     "react-native": "0.68.2",
+    "react-native-gesture-handler": "2.4.2",
+    "react-native-reanimated": "2.8.0",
+    "react-native-safe-area-context": "4.3.1",
+    "react-native-screens": "3.13.1",
     "tsc-esm-fix": "2.18.0",
     "tslib": "2.4.0",
     "typescript": "4.7.4"
   },
+  "dependencies": {
+    "@qiwi/esm": "1.1.1",
+    "@textlint/markdown-to-ast": "12.1.1",
+    "fast-glob": "3.2.11",
+    "find-up": "6.3.0",
+    "react-docgen-typescript": "2.2.2",
+    "read-pkg-up": "9.1.0",
+    "require-from-string": "2.0.2"
+  },
   "resolutions": {
+    "@pijma/react-native": "1.1.0",
+    "@pijma/react-native-svg": "1.1.1",
+    "@react-navigation/bottom-tabs": "6.3.1",
+    "@react-navigation/drawer": "6.4.1",
+    "@react-navigation/native": "6.0.10",
+    "@react-navigation/native-stack": "6.6.2",
     "@types/react": "17.0.45",
     "@types/react-dom": "17.0.17",
     "@types/react-native": "0.67.9",
+    "markdown-to-jsx": "7.1.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-live": "3.1.1",
     "react-native": "0.68.2",
+    "react-native-gesture-handler": "2.4.2",
+    "react-native-reanimated": "2.8.0",
+    "react-native-safe-area-context": "4.3.1",
+    "react-native-screens": "3.13.1",
     "tslib": "2.4.0"
   },
   "packageManager": "yarn@4.0.0-rc.9"

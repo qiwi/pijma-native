@@ -1,9 +1,7 @@
 Wrapper around [Pressable](https://reactnative.dev/docs/pressable)
 
 ```jsx
-import React from 'react'
-import { Pressable, Text } from '@pijma/react-native'
-;<Pressable
+<Pressable
   backgroundColor={({ pressed }) => (pressed ? 'red' : 'green')}
   width={300}
   height={300}

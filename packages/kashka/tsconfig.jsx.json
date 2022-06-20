@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noEmit": false,
+    "declaration": false,
+    "sourceMap": false,
+    "inlineSources": true,
+    "inlineSourceMap": true,
+    "jsx": "preserve",
+    "target": "es6",
+    "module": "esnext",
+    "outDir": "./lib/jsx"
+  }
+}

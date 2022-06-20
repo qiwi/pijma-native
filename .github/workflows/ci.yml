@@ -38,6 +38,8 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
+      - name: Build Web
+        run: yarn web:build
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}

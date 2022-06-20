@@ -3,9 +3,7 @@ Wrapper around [Image](https://reactnative.dev/docs/image)
 ## Simple
 
 ```jsx
-import React from 'react'
-import { Image } from '@pijma/react-native'
-;<Image
+<Image
   width={300}
   height={300}
   source={{
@@ -17,9 +15,7 @@ import { Image } from '@pijma/react-native'
 ## Basic
 
 ```jsx
-import React from 'react'
-import { Image } from '@pijma/react-native'
-;<Image
+<Image
   width={[300, 600, 800]}
   height={[300, 600, 800]}
   source={{

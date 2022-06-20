@@ -1,9 +1,7 @@
 Wrapper around [SectionList](https://reactnative.dev/docs/sectionlist)
 
 ```jsx
-import React from 'react'
-import { SectionList, Text, View } from '@pijma/react-native'
-;<SectionList
+<SectionList
   height={400}
   sections={[
     {
