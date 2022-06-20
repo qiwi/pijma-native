@@ -1621,7 +1621,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pijma/android@workspace:packages/android"
   dependencies:
-    "@pijma/kashka": "npm:1.1.1"
+    "@pijma/kashka": "npm:1.2.0"
     babel-plugin-tsconfig-paths-module-resolver: "npm:1.0.3"
     eslint: "npm:8.18.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1644,7 +1644,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pijma/ios@workspace:packages/ios"
   dependencies:
-    "@pijma/kashka": "npm:1.1.1"
+    "@pijma/kashka": "npm:1.2.0"
     babel-plugin-tsconfig-paths-module-resolver: "npm:1.0.3"
     eslint: "npm:8.18.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -1663,12 +1663,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/kashka@npm:1.1.1, @pijma/kashka@workspace:packages/kashka":
+"@pijma/kashka@npm:1.2.0, @pijma/kashka@workspace:packages/kashka":
   version: 0.0.0-use.local
   resolution: "@pijma/kashka@workspace:packages/kashka"
   dependencies:
-    "@pijma/react-native": "npm:1.1.0"
-    "@pijma/react-native-svg": "npm:1.1.1"
+    "@pijma/react-native": "npm:1.2.0"
+    "@pijma/react-native-svg": "npm:1.2.0"
     "@qiwi/esm": "npm:1.1.1"
     "@react-navigation/bottom-tabs": "npm:6.3.1"
     "@react-navigation/drawer": "npm:6.4.1"
@@ -1715,7 +1715,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native-svg@npm:1.1.1, @pijma/react-native-svg@workspace:packages/react-native-svg":
+"@pijma/react-native-svg@npm:1.2.0, @pijma/react-native-svg@workspace:packages/react-native-svg":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native-svg@workspace:packages/react-native-svg"
   dependencies:
@@ -1738,19 +1738,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pijma/react-native@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@pijma/react-native@npm:1.1.0"
-  peerDependencies:
-    react: ">=17.0.0"
-    react-dom: ">=17.0.0"
-    react-native: ">=0.50.0"
-    tslib: ">=2.0.0"
-  checksum: b7f282bb98185b6c5ac7f7b45121e64f4ee3d00354a868d70dab1ff77fed1579b4dba11a9875679c6939f5e7c3bbcab3f5e02f39a81ad3123bea9f920532dd2a
-  languageName: node
-  linkType: hard
-
-"@pijma/react-native@workspace:packages/react-native":
+"@pijma/react-native@npm:1.2.0, @pijma/react-native@workspace:packages/react-native":
   version: 0.0.0-use.local
   resolution: "@pijma/react-native@workspace:packages/react-native"
   dependencies:
@@ -1776,7 +1764,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pijma/web@workspace:packages/web"
   dependencies:
-    "@pijma/kashka": "npm:1.1.1"
+    "@pijma/kashka": "npm:1.2.0"
     "@types/react": "npm:17.0.45"
     "@types/react-dom": "npm:17.0.17"
     "@types/react-native": "npm:0.67.9"
