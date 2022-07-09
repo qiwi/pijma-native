@@ -1,10 +1,16 @@
-import React, { ComponentType, FC } from 'react'
+import React, { ComponentType, ReactNode } from 'react'
 
 import { ComponentContext } from '../contexts'
 
-export const ComponentProvider: FC<{
+export interface ComponentProviderProps {
   components: Record<string, ComponentType>
-}> = ({ components, children }) => (
+  children?: ReactNode
+}
+
+export const ComponentProvider = ({
+  components,
+  children,
+}: ComponentProviderProps) => (
   <ComponentContext.Provider value={components}>
     {children}
   </ComponentContext.Provider>

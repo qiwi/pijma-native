@@ -1,11 +1,12 @@
 import { View } from '@pijma/react-native'
-import React, { Children, FC } from 'react'
+import React, { Children, ReactNode } from 'react'
 
 export interface WrapperProps {
   padding?: number
+  children?: ReactNode
 }
 
-export const Wrapper: FC<WrapperProps> = ({ children, padding = 8 }) => (
+export const Wrapper = ({ children, padding = 8 }: WrapperProps) => (
   <>
     {Children.toArray(children)
       .filter((child) => !!child)

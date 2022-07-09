@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react'
+import React, { ReactNode, useMemo } from 'react'
 
 import { BreakpointContext } from '../contexts'
 import { useWindowDimensions } from '../hooks'
@@ -10,12 +10,13 @@ export const getBreakpoint = (width: number, breakpoints: number[]) => {
 
 export interface BreakpointProviderProps {
   breakpoints: number[]
+  children?: ReactNode
 }
 
-export const BreakpointProvider: FC<BreakpointProviderProps> = ({
+export const BreakpointProvider = ({
   breakpoints,
   children,
-}) => {
+}: BreakpointProviderProps) => {
   const { width } = useWindowDimensions()
   const value = useMemo(
     () => getBreakpoint(width, breakpoints),

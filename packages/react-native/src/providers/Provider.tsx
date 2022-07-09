@@ -1,4 +1,4 @@
-import React, { ComponentType, FC } from 'react'
+import React, { ComponentType, ReactNode } from 'react'
 
 import { Theme } from '../Theme'
 import { BreakpointProvider } from './BreakpointProvider'
@@ -9,14 +9,15 @@ export interface ProviderProps {
   components?: Record<string, ComponentType>
   theme?: Theme
   breakpoints?: number[]
+  children?: ReactNode
 }
 
-export const Provider: FC<ProviderProps> = ({
+export const Provider = ({
   components = {},
   theme = {},
   breakpoints = [0],
   children,
-}) => (
+}: ProviderProps) => (
   <ComponentProvider components={components}>
     <ThemeProvider theme={theme}>
       <BreakpointProvider breakpoints={breakpoints}>

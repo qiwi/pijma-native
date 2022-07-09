@@ -1,11 +1,12 @@
 import { Image, Linking, Platform, Text, View } from '@pijma/react-native'
 import { useTheme } from '@react-navigation/native'
 import MarkdownToJsx from 'markdown-to-jsx'
-import React, { FC, useCallback } from 'react'
+import React, { useCallback } from 'react'
+import { GestureResponderEvent } from 'react-native'
 
 import { Wrapper } from './Wrapper'
 
-export const Markdown: FC<{ children: string | string[] }> = ({ children }) => {
+export const Markdown = ({ children }: { children: string | string[] }) => {
   const theme = useTheme()
   return (
     <MarkdownToJsx
@@ -110,7 +111,7 @@ export const Markdown: FC<{ children: string | string[] }> = ({ children }) => {
           ),
           a: ({ href, children }) => {
             const onPress = useCallback(
-              async (event) => {
+              async (event: GestureResponderEvent) => {
                 event.preventDefault()
                 await Linking.openURL(href)
               },

@@ -25,7 +25,7 @@ import {
   SvgTSpan,
   SvgUse,
 } from '@pijma/react-native-svg'
-import React, { FC } from 'react'
+import React from 'react'
 import {
   // LiveEditor,
   // LiveError,
@@ -33,7 +33,7 @@ import {
   LiveProvider,
 } from 'react-live'
 
-export const Playground: FC<{ children: string }> = ({ children }) => (
+export const Playground = ({ children }: { children: string }) => (
   <LiveProvider
     code={children}
     scope={{

@@ -18,7 +18,7 @@ import {
   useTheme,
 } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import React, { FC } from 'react'
+import React from 'react'
 
 import { Markdown } from './Markdown'
 import { Playground } from './Playground'
@@ -59,7 +59,7 @@ interface Config {
   prefix?: string
 }
 
-const Readme: FC<{ readme: Readme[] }> = ({ readme }) => (
+const Readme = ({ readme }: { readme: Readme[] }) => (
   <Wrapper>
     {readme.map(({ type, content }, i) =>
       type === 'playground' ? (
@@ -71,7 +71,7 @@ const Readme: FC<{ readme: Readme[] }> = ({ readme }) => (
   </Wrapper>
 )
 
-const Props: FC<{ props: Prop[] }> = ({ props }) => {
+const Props = ({ props }: { props: Prop[] }) => {
   const { Navigator, Screen } = createNativeStackNavigator()
   const theme = useTheme()
   return (
@@ -164,7 +164,7 @@ const Props: FC<{ props: Prop[] }> = ({ props }) => {
   )
 }
 
-const Section: FC<Section> = ({ readme }) => (
+const Section = ({ readme }: Section) => (
   <ScrollView
     contentContainerPaddingVertical={12}
     contentContainerPaddingHorizontal={8}
@@ -173,7 +173,7 @@ const Section: FC<Section> = ({ readme }) => (
   </ScrollView>
 )
 
-const Component: FC<Component> = ({ name, from, readme, props }) => {
+const Component = ({ name, from, readme, props }: Component) => {
   const { Navigator, Screen } = createBottomTabNavigator()
   return (
     <Navigator
@@ -198,7 +198,7 @@ const Component: FC<Component> = ({ name, from, readme, props }) => {
   )
 }
 
-const Pages: FC<{ pages: (Section | Component)[] }> = ({ pages }) => {
+const Pages = ({ pages }: { pages: (Section | Component)[] }) => {
   const { Navigator, Screen } = createDrawerNavigator()
   return (
     <Navigator
@@ -266,9 +266,7 @@ const screens = (pages: (Section | Component)[], prefix?: string) =>
     {},
   )
 
-export const App: FC<{
-  config: Config
-}> = ({ config }) => {
+export const App = ({ config }: { config: Config }) => {
   const scheme = useColorScheme()
   return (
     <Provider breakpoints={[600, 1200]}>

@@ -1,8 +1,8 @@
 name: CI
 on: [ push, pull_request ]
 jobs:
-  skipci:
-    name: Skip CI
+  init:
+    name: Init
     runs-on: ubuntu-latest
     outputs:
       skip: ${{ steps.ci-skip-step.outputs.ci-skip }}
@@ -14,7 +14,7 @@ jobs:
         uses: mstachniuk/ci-skip@v1
   test:
     name: Test
-    needs: skipci
+    needs: init
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,9 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          fetch-depth: 0
       - name: Install
         run: yarn install
       - name: Build
@@ -47,6 +44,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GIT_AUTHOR_EMAIL: 'opensource@qiwi.com'
           GIT_COMMITTER_EMAIL: 'opensource@qiwi.com'
-          GIT_AUTHOR_NAME: '@qiwibot'
-          GIT_COMMITTER_NAME: '@qiwibot'
-        run: yarn release
+          GIT_AUTHOR_NAME: 'QIWI Bot'
+          GIT_COMMITTER_NAME: 'QIWI Bot'
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        run: npm_config_yes=true npx zx-bulk-release --include-private
