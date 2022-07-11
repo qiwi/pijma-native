@@ -1,7 +1,7 @@
 {
   "name": "@pijma/web",
   "private": true,
-  "version": "1.2.2",
+  "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf lib",
@@ -10,7 +10,9 @@
     "style": "eslint --fix src && prettier --loglevel silent --write src"
   },
   "dependencies": {
-    "@pijma/kashka": "1.2.1",
+    "@pijma/kashka": "workspace:*",
+    "@pijma/react-native": "workspace:*",
+    "@pijma/react-native-svg": "workspace:*",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@types/react-native": "0.69.2",
