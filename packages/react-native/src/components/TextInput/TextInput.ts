@@ -3,8 +3,22 @@ import {
   TextInputProps as RNTextInputProps,
 } from 'react-native'
 
-import { styled, StyledProps, TextStyle } from '../../styled'
+import {
+  MouseEventHandlerProps,
+  styled,
+  StyledProps,
+  TextStyle,
+} from '../../styled'
 
-export type TextInputProps = StyledProps<RNTextInputProps, TextStyle>
+export type TextInputProps = StyledProps<
+  RNTextInputProps &
+    MouseEventHandlerProps & {
+      /**
+       * @platform web
+       */
+      disabled?: boolean
+    },
+  TextStyle
+>
 
 export const TextInput = styled<TextInputProps>(RNTextInput, { style: 'text' })

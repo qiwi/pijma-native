@@ -111,6 +111,8 @@ const Props = ({ props }: { props: Prop[] }) => {
                       ? '🤖 '
                       : item.tags.platform === 'ios'
                       ? '🍎 '
+                      : item.tags.platform === 'web'
+                      ? '🕸 '
                       : ''
                   }${item.name}${item.required ? ' ✨' : ''}`}
                 </Text>

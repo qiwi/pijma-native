@@ -33,31 +33,14 @@
     "README.md"
   ],
   "scripts": {
-    "clean": "rm -rf lib",
-    "build": "concurrently 'npm:build:*'",
-    "build:mjs": "tsc --project tsconfig.mjs.json && tsc-esm-fix --tsconfig tsconfig.mjs.json --ext .mjs",
-    "build:cjs": "tsc --project tsconfig.cjs.json && tsc-esm-fix --target lib/cjs --ext .cjs",
-    "build:jsx": "tsc --project tsconfig.jsx.json",
-    "build:dts": "tsc --project tsconfig.dts.json",
-    "style": "eslint --fix src && prettier --loglevel silent --write src"
+    "clean": "yarn infra:clean",
+    "build": "yarn infra:build",
+    "build:mjs": "yarn infra:build:mjs",
+    "build:cjs": "yarn infra:build:cjs",
+    "build:tsc": "yarn infra:build:tsc",
+    "style": "yarn infra:style"
   },
   "devDependencies": {
-    "@types/react": "18.0.15",
-    "@types/react-dom": "18.0.6",
-    "@types/react-native": "0.69.2",
-    "concurrently": "7.2.2",
-    "eslint": "8.19.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-config-qiwi": "1.17.3",
-    "prettier": "2.7.1",
-    "prettier-config-qiwi": "1.7.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.69.1",
-    "react-native-svg": "12.3.0",
-    "tsc-esm-fix": "2.18.0",
-    "tslib": "2.4.0",
-    "typescript": "4.7.4"
-  },
-  "packageManager": "yarn@4.0.0-rc.9"
+    "@pijma/infra": "workspace:*"
+  }
 }

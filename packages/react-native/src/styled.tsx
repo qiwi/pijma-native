@@ -1,6 +1,11 @@
-import React, { ComponentProps, ComponentType, forwardRef } from 'react'
+import { Property } from 'csstype'
+import React, {
+  ComponentProps,
+  ComponentType,
+  forwardRef,
+  MouseEventHandler,
+} from 'react'
 import {
-  ColorValue,
   FlexStyle,
   ImageProps as RNImageProps,
   ImageStyle as RNImageStyle,
@@ -17,8 +22,14 @@ import {
 
 import { useBreakpoint, useViewportUnits } from './hooks'
 
-type HrefProps = {
+export type HrefProps = {
+  /**
+   * @platform web
+   */
   href?: string
+  /**
+   * @platform web
+   */
   hrefAttrs?: {
     download?: string
     rel?: string
@@ -26,29 +37,139 @@ type HrefProps = {
   }
 }
 
-export type ViewProps = StyledProps<RNViewProps, ViewStyle> & HrefProps
-
-export type TextProps = StyledProps<RNTextProps, TextStyle> & HrefProps
-
-export type ImageProps = StyledProps<RNImageProps, ImageStyle>
-
-interface OutlineStyle {
-  outlineStyle?: 'solid' | 'dotted' | 'dashed' | 'none'
-  outlineColor?: ColorValue
-  outlineWidth?: number
+export type MouseEventHandlerProps = {
+  /**
+   * @platform web
+   */
+  onMouseDown?: MouseEventHandler
+  /**
+   * @platform web
+   */
+  onMouseEnter?: MouseEventHandler
+  /**
+   * @platform web
+   */
+  onMouseLeave?: MouseEventHandler
+  /**
+   * @platform web
+   */
+  onMouseMove?: MouseEventHandler
+  /**
+   * @platform web
+   */
+  onMouseOut?: MouseEventHandler
+  /**
+   * @platform web
+   */
+  onMouseOver?: MouseEventHandler
+  /**
+   * @platform web
+   */
+  onMouseUp?: MouseEventHandler
 }
 
-const outlineStyles: (keyof OutlineStyle)[] = [
+export type ViewProps = StyledProps<RNViewProps, ViewStyle> &
+  HrefProps &
+  MouseEventHandlerProps
+
+export type TextProps = StyledProps<RNTextProps, TextStyle> &
+  HrefProps &
+  MouseEventHandlerProps
+
+export type ImageProps = StyledProps<RNImageProps, ImageStyle> &
+  MouseEventHandlerProps
+
+interface WebStyle {
+  /**
+   * @platform web
+   */
+  cursor?: Property.Cursor
+  /**
+   * @platform web
+   */
+  touchAction?: Property.TouchAction
+  /**
+   * @platform web
+   */
+  userSelect?: Property.UserSelect
+  /**
+   * @platform web
+   */
+  willChange?: Property.WillChange
+  /**
+   * @platform web
+   */
+  outlineColor?: Property.OutlineColor
+  /**
+   * @platform web
+   */
+  outlineOffset?: Property.OutlineOffset
+  /**
+   * @platform web
+   */
+  outlineStyle?: Property.OutlineStyle
+  /**
+   * @platform web
+   */
+  outlineWidth?: Property.OutlineWidth
+  /**
+   * @platform web
+   */
+  transitionDelay?: Property.TransitionDelay
+  /**
+   * @platform web
+   */
+  transitionDuration?: Property.TransitionDuration
+  /**
+   * @platform web
+   */
+  transitionProperty?: Property.TransitionProperty
+  /**
+   * @platform web
+   */
+  transitionTimingFunction?: Property.TransitionTimingFunction
+}
+
+export type ViewStyle = Omit<RNViewStyle, 'testID'> & WebStyle
+
+export type TextStyle = Omit<RNTextStyle, 'testID'> & WebStyle
+
+export type ImageStyle = Omit<RNImageStyle, 'testID'> & WebStyle
+
+const webStyles: (keyof WebStyle)[] = [
+  'cursor',
+  'touchAction',
+  'userSelect',
+  'willChange',
   'outlineColor',
+  'outlineOffset',
   'outlineStyle',
   'outlineWidth',
+  'transitionDelay',
+  'transitionDuration',
+  'transitionProperty',
+  'transitionTimingFunction',
 ]
 
-export type ViewStyle = Omit<RNViewStyle, 'testID'> & OutlineStyle
+const borderRadiusStyles: (keyof Pick<
+  ViewStyle & ImageStyle,
+  | 'borderBottomLeftRadius'
+  | 'borderBottomRightRadius'
+  | 'borderRadius'
+  | 'borderTopLeftRadius'
+  | 'borderTopRightRadius'
+>)[] = [
+  'borderBottomLeftRadius',
+  'borderBottomRightRadius',
+  'borderRadius',
+  'borderTopLeftRadius',
+  'borderTopRightRadius',
+]
 
-export type TextStyle = Omit<RNTextStyle, 'testID'> & OutlineStyle
-
-export type ImageStyle = Omit<RNImageStyle, 'testID'> & OutlineStyle
+const colorStyles: (keyof Pick<
+  ViewStyle & ImageStyle,
+  'backfaceVisibility' | 'backgroundColor' | 'borderColor' | 'opacity'
+>)[] = ['backfaceVisibility', 'backgroundColor', 'borderColor', 'opacity']
 
 const shadowStyles: (keyof ShadowStyleIOS)[] = [
   'shadowColor',
@@ -116,36 +237,24 @@ const layoutStyles: (keyof FlexStyle)[] = [
 ]
 
 export const viewStyles: (keyof ViewStyle)[] = [
-  'backfaceVisibility',
-  'backgroundColor',
   'borderBottomColor',
   'borderBottomEndRadius',
-  'borderBottomLeftRadius',
-  'borderBottomRightRadius',
   'borderBottomStartRadius',
-  'borderBottomWidth',
-  'borderColor',
   'borderEndColor',
   'borderLeftColor',
-  'borderLeftWidth',
-  'borderRadius',
   'borderRightColor',
-  'borderRightWidth',
   'borderStartColor',
   'borderStyle',
   'borderTopColor',
   'borderTopEndRadius',
-  'borderTopLeftRadius',
-  'borderTopRightRadius',
   'borderTopStartRadius',
-  'borderTopWidth',
-  'borderWidth',
   'elevation',
-  'opacity',
-  ...outlineStyles,
+  ...colorStyles,
+  ...borderRadiusStyles,
   ...layoutStyles,
   ...shadowStyles,
   ...transformsStyles,
+  ...webStyles,
 ]
 
 export const textStyles: (keyof TextStyle)[] = [
@@ -172,24 +281,14 @@ export const textStyles: (keyof TextStyle)[] = [
 ]
 
 export const imageStyles: (keyof ImageStyle)[] = [
-  'backfaceVisibility',
-  'backgroundColor',
-  'borderBottomLeftRadius',
-  'borderBottomRightRadius',
-  'borderColor',
-  'borderRadius',
-  'borderTopLeftRadius',
-  'borderTopRightRadius',
-  'borderWidth',
-  'opacity',
-  'overflow',
   'overlayColor',
   'resizeMode',
   'tintColor',
+  ...borderRadiusStyles,
   ...layoutStyles,
-  ...outlineStyles,
   ...shadowStyles,
   ...transformsStyles,
+  ...webStyles,
 ]
 
 export type ResponsiveValue<Value> = Value | Value[]
@@ -319,7 +418,10 @@ const StyleStyles: Record<
   image: imageStyles,
 }
 
-export const styled = <Props, C extends ComponentType<ComponentProps<C>> = any>(
+export const styled = <
+  Props extends Record<string, any>,
+  C extends ComponentType<ComponentProps<C>> = any,
+>(
   Component: C,
   styles: Record<string, StyleType>,
 ) => {

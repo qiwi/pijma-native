@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "rootDir": "./"
+  },
+  "references": [
+    {
+      "path": "packages/kashka/tsconfig.build.json"
+    },
+    {
+      "path": "packages/react-native/tsconfig.build.json"
+    },
+    {
+      "path": "packages/react-native-svg/tsconfig.build.json"
+    }
+  ],
+  "files": []
+}

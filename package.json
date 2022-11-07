@@ -24,10 +24,10 @@
     "ios:setup": "yarn workspace @pijma/ios setup",
     "ios:start": "yarn workspace @pijma/ios start",
     "ios:clean": "yarn workspace @pijma/ios clean",
-    "clean": "yarn workspaces foreach --parallel --topological-dev --no-private run clean",
-    "build": "yarn workspaces foreach --parallel --topological-dev --no-private run build",
-    "style": "yarn workspaces foreach --parallel --topological-dev --no-private run style",
-    "test": "exit 0"
+    "clean": "yarn workspaces foreach -vip --no-private run clean",
+    "build": "yarn workspaces foreach -vip --no-private run build",
+    "style": "yarn workspaces foreach -vip --no-private run style",
+    "test": "yarn workspaces foreach -vip --no-private run test"
   },
-  "packageManager": "yarn@4.0.0-rc.9"
+  "packageManager": "yarn@4.0.0-rc.27"
 }

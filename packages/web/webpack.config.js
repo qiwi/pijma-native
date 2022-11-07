@@ -16,21 +16,31 @@ module.exports = (env, { mode }) => ({
     filename: '[name].[contenthash].js',
     chunkFilename: '[name].[contenthash].js',
     assetModuleFilename: '[name].[contenthash][ext]',
-    publicPath: '/pijma-native/',
+    publicPath: mode === 'development' ? '/' : '/pijma-native/',
   },
   module: {
     rules: [
       {
         oneOf: [
           {
-            test: /\.[jt]sx?$/,
-            loader: 'esbuild-loader',
+            test: /\.[cm]?[jt]sx?$/,
+            loader: 'swc-loader',
             options: {
-              loader: 'tsx',
+              jsc: {
+                parser: {
+                  syntax: 'typescript',
+                  tsx: true,
+                },
+                transform: {
+                  react: {
+                    runtime: 'automatic',
+                  },
+                },
+              },
             },
           },
           {
-            exclude: [/^$/, /\.[jt]sx?$/, /\.html$/, /\.json$/],
+            exclude: [/^$/, /\.[cm]?[jt]sx?$/, /\.html$/, /\.json$/],
             type: 'asset/resource',
           },
         ],
@@ -85,9 +95,5 @@ module.exports = (env, { mode }) => ({
   devServer: {
     historyApiFallback: true,
   },
-  ignoreWarnings: [
-    {
-      module: /react-native-gesture-handler/,
-    },
-  ],
+  ignoreWarnings: [() => true],
 })

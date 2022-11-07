@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "preserve",
+    "rootDir": "./src",
+    "outDir": "./lib/jsx",
+    "declarationDir": "./lib/dts",
+    "tsBuildInfoFile": "./lib/.tsbuildinfo"
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "./lib",
+    "./node_modules"
+  ]
+}

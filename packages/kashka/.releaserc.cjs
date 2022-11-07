@@ -1,1 +1,1 @@
-module.exports = require('../../.releaserc.js')
+module.exports = require('../infra/.releaserc.js')
