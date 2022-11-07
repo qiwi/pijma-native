@@ -1,0 +1,9 @@
+{
+  "META_VERSION": "1",
+  "name": "@pijma/react-native-svg",
+  "hash": "3568047ec3c5c37e0627901e4703affd37bb614c",
+  "version": "1.5.0",
+  "devDependencies": {
+    "@pijma/infra": "0.1.0"
+  }
+}
