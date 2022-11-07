@@ -1,0 +1,12 @@
+{
+  "META_VERSION": "1",
+  "name": "@pijma/android",
+  "hash": "3568047ec3c5c37e0627901e4703affd37bb614c",
+  "version": "1.5.0",
+  "dependencies": {
+    "@pijma/infra": "0.1.0",
+    "@pijma/kashka": "1.5.0",
+    "@pijma/react-native": "1.5.0",
+    "@pijma/react-native-svg": "1.5.0"
+  }
+}
